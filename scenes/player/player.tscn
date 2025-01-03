@@ -10,23 +10,6 @@
 radius = 3.0
 height = 14.0
 
-[sub_resource type="Animation" id="Animation_n0t2f"]
-resource_name = "idle_down"
-length = 0.2
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
 [sub_resource type="Animation" id="Animation_5xmye"]
 length = 0.001
 tracks/0/type = "value"
@@ -42,8 +25,8 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_52bmm"]
-resource_name = "idle_up"
+[sub_resource type="Animation" id="Animation_n0t2f"]
+resource_name = "idle_down"
 length = 0.2
 loop_mode = 2
 tracks/0/type = "value"
@@ -76,9 +59,9 @@ tracks/0/keys = {
 "values": [3, 4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_uicl6"]
-resource_name = "walk_up"
-length = 0.3
+[sub_resource type="Animation" id="Animation_52bmm"]
+resource_name = "idle_up"
+length = 0.2
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -87,10 +70,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [6, 7, 8, 9]
+"values": [0, 1, 2]
 }
 
 [sub_resource type="Animation" id="Animation_g5vak"]
@@ -127,6 +110,23 @@ tracks/0/keys = {
 "values": [10, 11, 12, 13]
 }
 
+[sub_resource type="Animation" id="Animation_uicl6"]
+resource_name = "walk_up"
+length = 0.3
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_reev0"]
 _data = {
 "RESET": SubResource("Animation_5xmye"),
@@ -139,6 +139,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_k5m8n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
