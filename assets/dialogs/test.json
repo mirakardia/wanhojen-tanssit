@@ -1,8 +1,7 @@
 {
-	"type": "big",
 	"start": "blah",
-	"dialogue": 
-	[
+	"dialog":
+    [
 		{
 			"name": "blah",
 			"speaker" : "test",
@@ -13,14 +12,30 @@
 				}
 			],
 			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius dolor orci, vitae dictum lorem vulputate id. Curabitur aliquam orci vel nibh lobortis rutrum. Duis dignissim ante nec quam venenatis gravida. Aliquam interdum ex sed suscipit consectetur. Nullam a justo metus. Morbi commodo purus non odio interdum, quis cursus odio congue. Proin finibus arcu nec porttitor sollicitudin. Integer tellus turpis, fringilla id nulla et, mattis porttitor enim. Nunc vel felis sed nulla molestie rhoncus sed vitae felis. Aliquam ut dolor facilisis, dictum turpis et, varius nunc. Nam blandit mi tellus, vitae rutrum arcu cursus et. Vivamus non sem eu sem dictum placerat at sit amet sem. Praesent in placerat magna, a auctor sem. Mauris non maximus est. Aliquam erat volutpat. Nam maximus varius orci.",
-			"responses" : [
+			"next": "blah2"
+		},
+		{
+			"name": "blah2",
+			"speaker" : "test2",
+			"effects" : [
 				{
-					"text": "Nice",
-					"goto": "blah2",
-					"reactions": {
-						"test" : 2
-					}
+					"emote" : "test",
+					"face" : "sad"
 				}
+			],
+			"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius dolor orci, vitae dictum lorem vulputate id. Curabitur aliquam orci vel nibh lobortis rutrum. Duis dignissim ante nec quam venenatis gravida. Aliquam interdum ex sed suscipit consectetur. Nullam a justo metus. Morbi commodo purus non odio interdum, quis cursus odio congue. Proin finibus arcu nec porttitor sollicitudin. Integer tellus turpis, fringilla id nulla et, mattis porttitor enim. Nunc vel felis sed nulla molestie rhoncus sed vitae felis. Aliquam ut dolor facilisis, dictum turpis et, varius nunc. Nam blandit mi tellus, vitae rutrum arcu cursus et. Vivamus non sem eu sem dictum placerat at sit amet sem. Praesent in placerat magna, a auctor sem. Mauris non maximus est. Aliquam erat volutpat. Nam maximus varius orci.",
+			"responses": [
+				{
+					"text": "Blah",
+					"next": "blah"
+				},
+				{
+					"text": "Blah2",
+					"next": "blah2"
+				},
+				{
+					"text": "Exit"
+				},
 			]
 		}
 	]

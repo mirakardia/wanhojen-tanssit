@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=3 uid="uid://cftpfr4pihrou"]
+
+[ext_resource type="Script" path="res://scripts/dialog_manager.gd" id="1_4h35n"]
+[ext_resource type="PackedScene" uid="uid://k7ikutlhaw4a" path="res://scenes/response.tscn" id="2_vudki"]
+
+[node name="Node" type="Control" node_paths=PackedStringArray("dialog_root")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4h35n")
+dialog_root = NodePath(".")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 268.0
+offset_right = 1001.0
+offset_bottom = 511.0
+color = Color(0.366595, 0.366595, 0.366595, 1)
+
+[node name="DialogBox" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 274.0
+offset_right = 920.0
+offset_bottom = 500.0
+bbcode_enabled = true
+text = "sielence"
+visible_characters_behavior = 1
+
+[node name="SpeakerLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 239.0
+offset_right = 392.0
+offset_bottom = 279.0
+theme_override_font_sizes/normal_font_size = 20
+text = "None"
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+layout_mode = 2
+offset_left = 148.0
+offset_top = 279.0
+offset_right = 986.0
+offset_bottom = 495.0
+follow_focus = true
+metadata/_edit_group_ = true
+
+[node name="Responses" type="VBoxContainer" parent="Scroll"]
+visible = false
+layout_mode = 2
+alignment = 2
+
+[node name="Response" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response5" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response2" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response3" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response4" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response6" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response7" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response8" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response9" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response10" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response11" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response12" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2

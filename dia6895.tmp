@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cftpfr4pihrou"]
+
+[ext_resource type="Script" path="res://scripts/dialog_manager.gd" id="1_4h35n"]
+
+[node name="Node" type="Control" node_paths=PackedStringArray("dialog_root")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4h35n")
+dialog_root = NodePath(".")
+
+[node name="DialogBox" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 273.0
+offset_right = 920.0
+offset_bottom = 499.0
+bbcode_enabled = true
+text = "sielence"
+visible_characters = 980
+visible_characters_behavior = 1
+visible_ratio = 1.22347
+
+[node name="SpeakerLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 239.0
+offset_right = 392.0
+offset_bottom = 279.0
+theme_override_font_sizes/normal_font_size = 20
+text = "None"

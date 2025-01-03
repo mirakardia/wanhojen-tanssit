@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://k7ikutlhaw4a"]
+
+[ext_resource type="Script" path="res://scripts/dialog_response.gd" id="1_7a87s"]
+
+[sub_resource type="Theme" id="Theme_00qqs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mkvo"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 4.0
+
+[node name="Response" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+mouse_filter = 1
+theme = SubResource("Theme_00qqs")
+script = ExtResource("1_7a87s")
+
+[node name="Container" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 40.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_2mkvo")
+
+[node name="Text" type="RichTextLabel" parent="Container"]
+custom_minimum_size = Vector2(300, 8)
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Hello m'lady"
+fit_content = true
+scroll_active = false
