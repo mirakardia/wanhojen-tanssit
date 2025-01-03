@@ -1,7 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cg16safufilmg"]
+[gd_scene load_steps=15 format=3 uid="uid://cg16safufilmg"]
 
 [ext_resource type="Texture2D" uid="uid://cwcmfmoycmqtc" path="res://assets/sprites/player/overworld/player.png" id="1_bfej0"]
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_k5m8n"]
+[ext_resource type="Script" path="res://scripts/player/player_state_machine.gd" id="3_uux84"]
+[ext_resource type="Script" path="res://scripts/player/state_idle.gd" id="4_a1w6t"]
+[ext_resource type="Script" path="res://scripts/player/state_walk.gd" id="5_7tsx4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7g3l5"]
 radius = 3.0
@@ -156,8 +159,11 @@ libraries = {
 "": SubResource("AnimationLibrary_reev0")
 }
 
-[node name="State" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_uux84")
 
-[node name="Idle" type="Node" parent="State"]
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_a1w6t")
 
-[node name="Walk" type="Node" parent="State"]
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("5_7tsx4")

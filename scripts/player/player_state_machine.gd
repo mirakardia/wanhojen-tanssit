@@ -39,7 +39,7 @@ func init(_player: Player) -> void:
 func set_state(new_state: State) -> void:
 	if new_state == null || new_state == current:
 		return
-    if current:
+	if current:
 		current.exit()
 
 	previous = current

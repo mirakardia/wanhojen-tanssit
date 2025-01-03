@@ -5,17 +5,17 @@ class_name State_Walk extends State
 
 # Called when the Player enters the State.
 func enter() -> void:
-    player.update_animation("walk")
+	player.update_animation("walk")
 
 
 # Called during every _process() call for the State.
 func process(_delta: float) -> State:
-    if player.direction == Vector2.ZERO:
-        return idle
-    else:
-        player.velocity = player.direction * speed
+	if player.direction == Vector2.ZERO:
+		return idle
+	else:
+		player.velocity = player.direction * speed
 
-        if player.set_direction():
-            player.update_animation("walk")
+		if player.set_direction():
+			player.update_animation("walk")
 
-        return null
+		return null
