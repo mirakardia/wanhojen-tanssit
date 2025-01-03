@@ -171,7 +171,7 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_lw2ke")
 
-[node name="Node2D" type="Node2D"]
+[node name="TestRoom" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -1
