@@ -60,4 +60,3 @@ func get_animation_direction() -> String:
 func update_animation(state : String) -> void:
 	# TODO: Implement state machine.
 	pass
-

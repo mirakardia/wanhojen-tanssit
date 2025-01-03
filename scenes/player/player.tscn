@@ -155,3 +155,9 @@ vframes = 4
 libraries = {
 "": SubResource("AnimationLibrary_reev0")
 }
+
+[node name="State" type="Node" parent="."]
+
+[node name="Idle" type="Node" parent="State"]
+
+[node name="Walk" type="Node" parent="State"]
