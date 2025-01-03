@@ -18,6 +18,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 SoundManager="*res://scenes/sound_manager.tscn"
+
 [display]
 
 window/size/viewport_width=800
