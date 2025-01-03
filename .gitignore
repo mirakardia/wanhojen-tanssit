@@ -3,7 +3,6 @@
 /android/
 
 # Project specific ignores
-assets/fonts/*
-assets/music/*
-assets/sounds/*
-assets/sprites/*
+
+#VSCode
+.vscode
