@@ -3,4 +3,7 @@
 /android/
 
 # Project specific ignores
-assets
+assets/fonts/*
+assets/music/*
+assets/sounds/*
+assets/sprites/*
