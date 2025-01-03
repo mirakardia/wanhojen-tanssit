@@ -1,9 +1,12 @@
-[gd_scene format=3 uid="uid://cg16safufilmg"]
+[gd_scene load_steps=2 format=3 uid="uid://cg16safufilmg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7lkr3"]
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7lkr3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
