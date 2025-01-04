@@ -3,8 +3,13 @@ extends Node
 # Simple effects
 # SoundManager.valikko_valinta.play() 
 # jne.
-@onready var sfx_valikko_valinta: AudioStreamPlayer = $SfxValikkoValinta
-@onready var sfx_molkyn_puhe: AudioStreamPlayer = $SfxMolkynPuhe
+@onready var sfx_puhe_molkky: AudioStreamPlayer = $SfxPuheMolkky
+@onready var sfx_puhe_afrikka: AudioStreamPlayer = $SfxPuheAfrikka
+@onready var sfx_puhe_birb: AudioStreamPlayer = $SfxPuheBirb
+@onready var sfx_puhe_pallomato: AudioStreamPlayer = $SfxPuhePallomato
+@onready var sfx_puhe_villa: AudioStreamPlayer = $SfxPuheVilla
+@onready var sfx_puhe_generic: AudioStreamPlayer = $SfxPuheGeneric
+@onready var sfx_valinta_valikko: AudioStreamPlayer = $SfxValintaValikko
 
 # Background music
 # SoundManager.play_bgm("bgm_name")
@@ -14,7 +19,14 @@ var current_bgm = null
 @onready var bgm_list = {
 		"bgm_none" = null,
 		"bgm_sakari" = $BgmSakari,
-		"bgm_molkky" = $BgmMolkky
+		"bgm_molkky" = $BgmMolkky,
+		"bgm_afrikka" = $BgmAfrikka,
+		"bgm_pallomato" = $BgmPallomato,
+		"bgm_title" = $BgmTitle,
+		"bgm_overworld" = $BgmOverworld,
+		"bgm_overworld2" = $BgmOverworld2,
+		"bgm_overworld3" = $BgmOverworld3,
+		"bgm_overworld4" = $BgmOverworld4,
 		}
 
 #region Audio pools OBSOLETE
@@ -43,15 +55,23 @@ func speak_gibberish(profile = "default") -> void:
 		
 	if gibberish_count == 0:
 		gibberish_count = gibberish_freq
-		
+		profile = profile.to_lower()
 		
 		match profile:
-			"molkky":
-				sfx_molkyn_puhe.play()
+			"molkky", "mölkky", "mölkkypölkky", "mölkky-pölkky":
+				sfx_puhe_molkky.play()
+			"afrikka", "afrikantähti", "afrikan tähti", "afrikan":
+				sfx_puhe_afrikka.play()
+			"birb", "bird", "angsty", "angsty birb", "angry bird":
+				sfx_puhe_birb.play()
+			"pallomato", "mato ja pallo", "pallo ja mato", "pallo", "mato":
+				sfx_puhe_pallomato.play()
+			"villapaita", "villa", "sakari", "sakarin villapaita": 
+				sfx_puhe_villa.play()
 			"default":
-				sfx_molkyn_puhe.play()
+				sfx_puhe_generic.play()
 
-func play_bgm(song) -> void :
+func play_bgm(song: String) -> void :
 	if current_bgm != song:
 		stop_bgm()
 		current_bgm = song
