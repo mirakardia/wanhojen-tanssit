@@ -34,10 +34,11 @@ func set_direction() -> bool:
 	# No need to set a new direction if the direction is a zero vector.
 	if direction == Vector2.ZERO:
 		return false
-	elif direction.x == 0:
-		new_direction = Vector2.UP if direction.y < 0 else Vector2.DOWN
-	elif direction.y == 0:
-		new_direction = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
+	
+	if abs(direction.x) > abs(direction.y):
+		new_direction = Vector2.RIGHT if direction.x > 0 else Vector2.LEFT
+	else:
+		new_direction = Vector2.DOWN if direction.y > 0 else Vector2.UP
 
 	# No need to set a new direction if no change was made.
 	if new_direction == cardinal: 
