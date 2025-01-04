@@ -10,10 +10,8 @@ extends Node
 @onready var speaker_label : RichTextLabel = dialog_root.get_node("SpeakerLabel")
 @onready var response_list : Control = dialog_root.get_node("Scroll/Responses")
 @onready var participant_line : Line2D = dialog_root.get_node("ParticipantRow")
+@onready var game_manager : Node = get_node("/root/GameManager")
 #@onready var background : Node = dialog_root.get_node("Backgroudn")
-
-signal update_relation(speaker, value)
-
 
 
 const response_scene = preload("res://scenes/response.tscn")
@@ -30,6 +28,7 @@ var text_speed : int = 1
 
 func _ready() -> void:
 	load_participant_data()
+
 	start_scene("test")
 	start_dialog(dialog_data.start)
 
@@ -45,6 +44,9 @@ func load_participant_data() -> void:
 			var emote_image = Image.load_from_file(json.emotes[emote])
 			var emote_texture = ImageTexture.create_from_image(emote_image)
 			json.emotes[emote] = emote_texture
+		
+		json.reaction_origin = Vector2(json.reaction_origin.x,json.reaction_origin.y)
+
 		participants[file.trim_suffix(".json")] = json
 
 
@@ -83,11 +85,7 @@ func skip_or_next() -> void:
 		var response_data = get_viewport().gui_get_focus_owner().data
 		
 		if response_data.has("reactions"):
-			for participant in response_data.reactions.keys:
-				update_relation.emit(participant, response_data.reactions[participant])
-				if current_participants.has(participant):
-					current_participants[participant].show_relation_update(response_data.reactions[participant])	
-		
+			update_reactions(response_data.reactions)
 		if response_data.has("next"):
 			start_dialog(response_data.next)
 		else:
@@ -145,6 +143,12 @@ func run_effects (effects: Array) -> void:
 					add_participant(effect.actor)
 				"leave_conversation":
 					remove_participant(effect.actor)
+				"emote":
+					change_participant_emote(effect.actor, effect.emote)
+				"reactions":
+					update_reactions(effect.reactions)
+				"change_state":
+					game_manager.set_game_state(effect.key, effect.value)
 				_:
 					push_error("Unknown Effect at dialog" + current_dialog.name)
 		else:
@@ -185,6 +189,13 @@ func remove_participant(participant: String) -> void:
 		participant_obj.call_deferred("set_new_pos", participant_line.get_point_from_line(1.0/count*i))
 		i += 1
 
+func change_participant_emote(patricipant: String, emote: String) -> void:
+	if not current_participants.has(patricipant):
+		push_error("Cannot change emote of character not present in dialog " + current_dialog.name)
+		return
+	current_participants[patricipant].change_emote(emote)
+
+
 func show_responses (responses: Array) -> void:
 	dialog_box.visible = false
 	response_list.visible = true
@@ -195,6 +206,16 @@ func show_responses (responses: Array) -> void:
 
 	for response in responses:
 		var instant = response_scene.instantiate()
-		instant.set_data(response)
+		instant.set_data(response, game_manager)
 		response_list.add_child(instant)
-	response_list.get_child(0).grab_focus()
+
+	for child : Control in response_list.get_children():
+		if not child.focus_mode == Control.FocusMode.FOCUS_NONE:
+			child.grab_focus()
+			break
+func update_reactions(reactions: Dictionary):
+	for participant in reactions.keys():
+		game_manager.update_relation(participant, reactions[participant])
+		if current_participants.has(participant):
+			current_participants[participant].show_relation_update(reactions[participant])	
+		

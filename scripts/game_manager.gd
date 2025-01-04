@@ -4,10 +4,17 @@ var game_state : Dictionary
 
 
 func update_relation(speaker, value):
+	if not game_state.has(speaker):
+		game_state[speaker] = 0	
 	game_state[speaker] += value
 
 func set_game_state(key, value):
 	game_state[key] = value
+
+func get_game_state(key):
+	if game_state.has(key):
+		return game_state[key]
+	return null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
