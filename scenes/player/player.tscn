@@ -140,6 +140,7 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 3
+motion_mode = 1
 script = ExtResource("1_k5m8n")
 
 [node name="Camera2D" type="Camera2D" parent="."]
