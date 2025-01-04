@@ -1,13 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cftpfr4pihrou"]
+[gd_scene load_steps=4 format=3 uid="uid://cftpfr4pihrou"]
 
 [ext_resource type="Script" path="res://scripts/dialog_manager.gd" id="1_4h35n"]
 [ext_resource type="PackedScene" uid="uid://k7ikutlhaw4a" path="res://scenes/response.tscn" id="2_vudki"]
+[ext_resource type="Texture2D" uid="uid://bbi1ovscu3jvs" path="res://assets/icon.svg" id="3_8b7tg"]
 
 [node name="Node" type="Control" node_paths=PackedStringArray("dialog_root")]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_4h35n")
 dialog_root = NodePath(".")
+speaker_icons = {
+"Sinä": ExtResource("3_8b7tg")
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -85,3 +89,12 @@ layout_mode = 2
 
 [node name="Response12" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
 layout_mode = 2
+
+[node name="SpeakerIcon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 226.0
+offset_right = 150.0
+offset_bottom = 306.0
+texture = ExtResource("3_8b7tg")
+expand_mode = 3

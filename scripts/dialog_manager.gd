@@ -2,12 +2,20 @@ extends Node
 
 
 @export var dialog_root : Node
+@export var speaker_icons: Dictionary
+@export var patricipant_images: Dictionary
+
+
 
 @onready var dialog_box : RichTextLabel = dialog_root.get_node("DialogBox")
-#@onready var speaker_icon : Node = dialog_root.get_node("SpeakerIcon")
+@onready var speaker_icon : Node = dialog_root.get_node("SpeakerIcon")
 @onready var speaker_label : RichTextLabel = dialog_root.get_node("SpeakerLabel")
 @onready var response_list : Control = dialog_root.get_node("Scroll/Responses")
 #@onready var background : Node = dialog_root.get_node("Backgroudn")
+
+signal update_relation(speaker, value)
+
+
 
 const response_scene = preload("res://scenes/response.tscn")
 
@@ -56,6 +64,13 @@ func skip_or_next() -> void:
 				end_dialog()
 	elif response_list.visible:
 		var response_data = get_viewport().gui_get_focus_owner().data
+		
+		if response_data.has("reactions"):
+			for participant in response_data.reactions.keys:
+				update_relation.emit(participant, response_data.reactions[participant])
+				if participants.has(participant):
+					participants[participant].show_relation_update(response_data.reactions[participant])	
+		
 		if response_data.has("next"):
 			start_dialog(response_data.next)
 		else:
@@ -88,6 +103,10 @@ func end_dialog() -> void:
 
 func set_active_speaker(speaker : String) -> void:
 	speaker_label.text = speaker
+	if speaker_icons.has(speaker):
+		speaker_icon.texture = speaker_icons[speaker]
+	else: 
+		speaker_icon.texture = null
 	for participant in participants:
 		participant.set_deactive()
 
@@ -95,6 +114,13 @@ func set_active_speaker(speaker : String) -> void:
 		participants[speaker].set_active()
 
 func run_effects (effects: Array) -> void:
+	for effect in effects:
+		if effect.has("type"):
+			match effect.type:
+				_:
+					push_error("Unknown Effect at dialog" + current_dialog.name)
+		else:
+			push_error("Invalid effect object at dialog" + current_dialog.name)
 	pass
 
 
@@ -102,6 +128,7 @@ func show_responses (responses: Array) -> void:
 	dialog_box.visible = false
 	response_list.visible = true
 	set_active_speaker("Sinä")
+
 	for child in response_list.get_children() :
 		child.call("free")
 
