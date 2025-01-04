@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c12wio8ud4xbt"]
+
+[ext_resource type="Script" path="res://scripts/dialog/participant.gd" id="1_7v7kt"]
+[ext_resource type="Texture2D" uid="uid://bd0d435armm3p" path="res://assets/sprites/angsty_bird/dialog/angsty_bird_neutral.png" id="1_48f57"]
+
+[node name="participant" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1.0
+script = ExtResource("1_7v7kt")
+quite_color = Color(0.419813, 0.419813, 0.419813, 1)
+jump = Vector2(0, 20)
+
+[node name="Offset" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="Portrait" type="TextureRect" parent="Offset"]
+layout_mode = 0
+offset_left = -238.0
+offset_top = -517.0
+offset_right = 274.0
+offset_bottom = -5.0
+texture = ExtResource("1_48f57")

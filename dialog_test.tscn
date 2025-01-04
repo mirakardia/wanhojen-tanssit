@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cftpfr4pihrou"]
+[gd_scene load_steps=5 format=3 uid="uid://cftpfr4pihrou"]
 
-[ext_resource type="Script" path="res://scripts/dialog_manager.gd" id="1_4h35n"]
+[ext_resource type="Script" path="res://scripts/dialog/dialog_manager.gd" id="1_4h35n"]
 [ext_resource type="PackedScene" uid="uid://k7ikutlhaw4a" path="res://scenes/response.tscn" id="2_vudki"]
 [ext_resource type="Texture2D" uid="uid://bbi1ovscu3jvs" path="res://assets/icon.svg" id="3_8b7tg"]
+[ext_resource type="Script" path="res://scripts/dialog/line_util.gd" id="4_4yij5"]
 
 [node name="Node" type="Control" node_paths=PackedStringArray("dialog_root")]
 layout_mode = 3
@@ -10,42 +11,42 @@ anchors_preset = 0
 script = ExtResource("1_4h35n")
 dialog_root = NodePath(".")
 speaker_icons = {
-"Sinä": ExtResource("3_8b7tg")
+"%s": ExtResource("3_8b7tg")
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 268.0
-offset_right = 1001.0
-offset_bottom = 511.0
+offset_left = 234.0
+offset_top = 661.0
+offset_right = 1104.0
+offset_bottom = 904.0
 color = Color(0.366595, 0.366595, 0.366595, 1)
 
 [node name="DialogBox" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 159.0
-offset_top = 274.0
-offset_right = 920.0
-offset_bottom = 500.0
+offset_left = 262.0
+offset_top = 667.0
+offset_right = 1023.0
+offset_bottom = 893.0
 bbcode_enabled = true
 text = "sielence"
 visible_characters_behavior = 1
 
 [node name="SpeakerLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 153.0
-offset_top = 239.0
-offset_right = 392.0
-offset_bottom = 279.0
+offset_left = 256.0
+offset_top = 632.0
+offset_right = 495.0
+offset_bottom = 672.0
 theme_override_font_sizes/normal_font_size = 20
 text = "None"
 
 [node name="Scroll" type="ScrollContainer" parent="."]
 layout_mode = 2
-offset_left = 148.0
-offset_top = 279.0
-offset_right = 986.0
-offset_bottom = 495.0
+offset_left = 251.0
+offset_top = 672.0
+offset_right = 1089.0
+offset_bottom = 888.0
 follow_focus = true
 metadata/_edit_group_ = true
 
@@ -92,9 +93,14 @@ layout_mode = 2
 
 [node name="SpeakerIcon" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 70.0
-offset_top = 226.0
-offset_right = 150.0
-offset_bottom = 306.0
+offset_left = 173.0
+offset_top = 619.0
+offset_right = 253.0
+offset_bottom = 699.0
 texture = ExtResource("3_8b7tg")
 expand_mode = 3
+
+[node name="ParticipantRow" type="Line2D" parent="."]
+points = PackedVector2Array(1383, 610, 60, 608)
+width = 0.0
+script = ExtResource("4_4yij5")

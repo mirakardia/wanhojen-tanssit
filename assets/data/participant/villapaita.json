@@ -1,0 +1,8 @@
+{
+	"offset": 20,
+	"name": "Sakarin Villapaita",
+	"neutral": "happy",
+	"emotes": {
+		"happy": "assets/sprites/villapaita/dialog/sakarin_villapaita_positive.png"
+	}
+}

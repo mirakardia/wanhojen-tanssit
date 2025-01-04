@@ -1,0 +1,8 @@
+{
+	"offset": 20,
+	"name": "Angsty Bird",
+	"neutral": "happy",
+	"emotes": {
+		"happy": "assets/sprites/angsty_bird/dialog/angsty_bird_positive.png"
+	}
+}

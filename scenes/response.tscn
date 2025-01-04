@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://k7ikutlhaw4a"]
 
-[ext_resource type="Script" path="res://scripts/dialog_response.gd" id="1_7a87s"]
+[ext_resource type="Script" path="res://scripts/dialog/dialog_response.gd" id="1_7a87s"]
 
 [sub_resource type="Theme" id="Theme_00qqs"]
 
