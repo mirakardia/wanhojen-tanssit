@@ -1,0 +1,18 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=7 format=3 uid="uid://d3ttemb62vhn4"]
+
+[ext_resource type="AudioStream" uid="uid://dsu6kibi8qpxt" path="res://assets/kenney_ui-audio/rollover1.ogg" id="1_6q24m"]
+[ext_resource type="AudioStream" uid="uid://dgvj4k0eov71t" path="res://assets/kenney_ui-audio/rollover2.ogg" id="2_451fe"]
+[ext_resource type="AudioStream" uid="uid://bq253sl2hi5yk" path="res://assets/kenney_ui-audio/rollover3.ogg" id="3_csneg"]
+[ext_resource type="AudioStream" uid="uid://d2lr4eerp53ow" path="res://assets/kenney_ui-audio/rollover4.ogg" id="4_bnswt"]
+[ext_resource type="AudioStream" uid="uid://c0oejyuja5h7w" path="res://assets/kenney_ui-audio/rollover5.ogg" id="5_7su14"]
+[ext_resource type="AudioStream" uid="uid://dlxrw74rx04lf" path="res://assets/kenney_ui-audio/rollover6.ogg" id="6_cwylf"]
+
+[resource]
+random_pitch = 2.14
+streams_count = 6
+stream_0/stream = ExtResource("1_6q24m")
+stream_1/stream = ExtResource("2_451fe")
+stream_2/stream = ExtResource("3_csneg")
+stream_3/stream = ExtResource("4_bnswt")
+stream_4/stream = ExtResource("5_7su14")
+stream_5/stream = ExtResource("6_cwylf")
