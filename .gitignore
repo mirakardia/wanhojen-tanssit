@@ -3,6 +3,6 @@
 /android/
 
 # Project specific ignores
-
+.temp
 #VSCode
 .vscode
