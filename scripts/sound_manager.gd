@@ -7,6 +7,8 @@ extends Node
 @onready var sfx_puhe_afrikka: AudioStreamPlayer = $SfxPuheAfrikka
 @onready var sfx_puhe_birb: AudioStreamPlayer = $SfxPuheBirb
 @onready var sfx_puhe_pallomato: AudioStreamPlayer = $SfxPuhePallomato
+@onready var sfx_puhe_pallo: AudioStreamPlayer = $SfxPuhePallo
+@onready var sfx_puhe_mato: AudioStreamPlayer = $SfxPuheMato
 @onready var sfx_puhe_villa: AudioStreamPlayer = $SfxPuheVilla
 @onready var sfx_puhe_generic: AudioStreamPlayer = $SfxPuheGeneric
 @onready var sfx_valinta_valikko: AudioStreamPlayer = $SfxValintaValikko
@@ -29,46 +31,70 @@ var current_bgm = null
 		"bgm_overworld4" = $BgmOverworld4,
 		}
 
-#region Audio pools OBSOLETE
-# SoundManager.play_random("AudioPool")
-
-
-var audio_pools = {}
-
-func _ready() -> void:
-	var all_audio_pool_nodes = get_children()
-	
-	for pool in all_audio_pool_nodes:
-		var nimi = pool.name
-		audio_pools[nimi] = []
-		var all_sound_variants = pool.get_children()
-		
-		for sound_variant in all_sound_variants:
-			audio_pools[nimi].push_back(sound_variant)
-#endregion
-
 var gibberish_freq : int = 10
 var gibberish_count : int = gibberish_freq
+var gibberish_profile : String = "default"
 
-func speak_gibberish(profile = "default") -> void:
+# Volume control
+@onready var bus_master : int = AudioServer.get_bus_index("Master")
+@onready var bus_bgm : int = AudioServer.get_bus_index("Bgm")
+@onready var bus_sfx : int = AudioServer.get_bus_index("Sfx")
+@onready var bus_speech : int = AudioServer.get_bus_index("Speech")
+
+@onready var bus_list = {
+		"master" : bus_master,
+		"bgm" : bus_bgm,
+		"sfx" : bus_sfx,
+		"speech" : bus_speech
+		}
+
+func set_volume(vol : float, bus : String = "master") -> void:
+	AudioServer.set_bus_volume_db(
+			SoundManager.bus_list[bus],
+			linear_to_db(vol)
+	)
+	
+func get_volume(bus : String = "master") -> float:
+	var bus_id = bus_list[bus]
+	var return_value = db_to_linear(
+		AudioServer.get_bus_volume_db(bus_id)
+	)
+	return return_value
+	
+func set_mute(mute_or_unmute : bool = true, bus : String = "master") -> void:
+	AudioServer.set_bus_mute(
+			SoundManager.bus_list[bus],
+			mute_or_unmute
+	)
+
+func set_gibberish_profile(profile : String = "default") -> void:
+	SoundManager.gibberish_profile = profile.to_lower()
+	
+func get_gibberish_profile() -> String:
+	return SoundManager.gibberish_profile
+
+func speak_gibberish() -> void:
 	gibberish_count -= 1
 		
 	if gibberish_count == 0:
 		gibberish_count = gibberish_freq
-		profile = profile.to_lower()
-		
-		match profile:
+				
+		match gibberish_profile:
 			"molkky", "mölkky", "mölkkypölkky", "mölkky-pölkky":
 				sfx_puhe_molkky.play()
-			"afrikka", "afrikantähti", "afrikan tähti", "afrikan":
+			"tähti", "tahti", "afrikka", "afrikantähti", "afrikan tähti", "afrikan":
 				sfx_puhe_afrikka.play()
 			"birb", "bird", "angsty", "angsty birb", "angry bird":
 				sfx_puhe_birb.play()
-			"pallomato", "mato ja pallo", "pallo ja mato", "pallo", "mato":
+			"pallomato", "mato ja pallo", "pallo ja mato", "bounce ja mato", "mato ja bounce":
 				sfx_puhe_pallomato.play()
+			"pallo", "bounce":
+				sfx_puhe_pallo.play()
+			"mato":
+				sfx_puhe_mato.play()
 			"villapaita", "villa", "sakari", "sakarin villapaita": 
 				sfx_puhe_villa.play()
-			"default":
+			"default", _:
 				sfx_puhe_generic.play()
 
 func play_bgm(song: String) -> void :
@@ -82,11 +108,3 @@ func stop_bgm() -> void :
 		bgm_list[current_bgm].stop()
 		current_bgm = null
 		
-#region Obsolete
-# Obsolete
-# Randomisointi hoituu helpommin suoraan assetin kautta
-func play_random(pool) -> void :
-	var pool_size = len(audio_pools[pool])
-	var stream = randi_range(0, pool_size - 1)
-	audio_pools[pool][stream].play()
-#endregion

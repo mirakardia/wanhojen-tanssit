@@ -26,7 +26,7 @@ func _process(_delta: float) -> void:
 	if dialog_box.visible_ratio < 1:
 		dialog_box.visible_characters += text_speed
 		
-		SoundManager.speak_gibberish("pallo")
+		SoundManager.speak_gibberish()
 		
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:

@@ -97,66 +97,96 @@ script = ExtResource("1_6wc0h")
 
 [node name="SfxPuheMolkky" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_85kwh")
+bus = &"Speech"
 
 [node name="SfxPuheAfrikka" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_dkdwv")
+bus = &"Speech"
 
 [node name="SfxPuheGeneric" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_d6dg7")
+bus = &"Speech"
 
 [node name="SfxPuhePallomato" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_v6ktu")
+bus = &"Speech"
+
+[node name="SfxPuhePallo" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_v6ktu")
+bus = &"Speech"
+
+[node name="SfxPuheMato" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_v6ktu")
+bus = &"Speech"
 
 [node name="SfxPuheVilla" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_ap1am")
+bus = &"Speech"
 
 [node name="SfxPuheBirb" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_631o4")
+bus = &"Speech"
 
 [node name="SfxValintaValikko" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_jipfs")
+bus = &"Sfx"
 
 [node name="SfxValintaKeskustelu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("30_6s4ae")
+bus = &"Sfx"
 
 [node name="SfxMapOvi" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_6rv8j")
+bus = &"Sfx"
 
 [node name="SfxKeskusteluIlahtuu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_5fmj3")
+bus = &"Sfx"
 
 [node name="SfxKeskusteluPahastuu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_gbxdd")
+bus = &"Sfx"
 
 [node name="SfxSparkles" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_hkuhf")
+bus = &"Sfx"
 
 [node name="BgmMolkky" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_fb67g")
+bus = &"Bgm"
 
 [node name="BgmSakari" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"
 
 [node name="BgmAfrikka" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"
 
 [node name="BgmBirb" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"
 
 [node name="BgmPallomato" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"
 
 [node name="BgmTitle" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"
 
 [node name="BgmOverworld" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"
 
 [node name="BgmOverworld2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"
 
 [node name="BgmOverworld3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"
 
 [node name="BgmOverworld4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uttcu")
+bus = &"Bgm"

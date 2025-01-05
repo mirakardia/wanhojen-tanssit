@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5mgi7o2rejxc"]
+
+[ext_resource type="PackedScene" uid="uid://e3atnr4jvvv0" path="res://scenes/pause-options-menu/volume_slider.tscn" id="1_j2cf2"]
+[ext_resource type="PackedScene" uid="uid://23drddl3ydow" path="res://scenes/pause-options-menu/mute_toggle.tscn" id="2_hdrv7"]
+
+[node name="PanelContainer" type="PanelContainer"]
+offset_left = 203.0
+offset_top = 153.0
+offset_right = 1260.0
+offset_bottom = 877.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="LabelMaster" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Master"
+horizontal_alignment = 1
+
+[node name="VolumeSliderMaster" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
+layout_mode = 2
+bus_name = "master"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MuteToggle" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_hdrv7")]
+layout_mode = 2
+text = "mykistä"
+bus_name = "master"
+
+[node name="LabelBgm" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Musiikki"
+horizontal_alignment = 1
+
+[node name="VolumeSliderBgm" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
+layout_mode = 2
+bus_name = "bgm"
+
+[node name="LabelSfx" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Efektit"
+horizontal_alignment = 1
+
+[node name="VolumeSliderSfx" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
+layout_mode = 2
+bus_name = "sfx"
+
+[node name="LaberSpeech" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Puhe"
+horizontal_alignment = 1
+
+[node name="VolumeSliderSpeech" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
+layout_mode = 2
+bus_name = "speech"
