@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5mgi7o2rejxc"]
+[gd_scene load_steps=5 format=3 uid="uid://b5mgi7o2rejxc"]
 
 [ext_resource type="PackedScene" uid="uid://e3atnr4jvvv0" path="res://scenes/pause-options-menu/volume_slider.tscn" id="1_j2cf2"]
 [ext_resource type="PackedScene" uid="uid://23drddl3ydow" path="res://scenes/pause-options-menu/mute_toggle.tscn" id="2_hdrv7"]
+[ext_resource type="PackedScene" uid="uid://ctkaoyni412ka" path="res://scenes/pause-options-menu/sound_test.tscn" id="3_505rn"]
+[ext_resource type="Script" path="res://scenes/pause-options-menu/volume_slider.gd" id="4_27s16"]
 
 [node name="PanelContainer" type="PanelContainer"]
 offset_left = 203.0
@@ -39,6 +41,19 @@ horizontal_alignment = 1
 layout_mode = 2
 bus_name = "bgm"
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MuteToggle" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_hdrv7")]
+layout_mode = 2
+text = "mykistä"
+bus_name = "bgm"
+
+[node name="SoundTest" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("3_505rn")]
+layout_mode = 2
+toggle_mode = false
+test_audio = "bgm"
+
 [node name="LabelSfx" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Efektit"
@@ -48,6 +63,19 @@ horizontal_alignment = 1
 layout_mode = 2
 bus_name = "sfx"
 
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MuteToggle" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("2_hdrv7")]
+layout_mode = 2
+text = "mykistä"
+bus_name = "sfx"
+
+[node name="SoundTest" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("3_505rn")]
+layout_mode = 2
+toggle_mode = false
+test_audio = "sfx"
+
 [node name="LaberSpeech" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Puhe"
@@ -55,4 +83,14 @@ horizontal_alignment = 1
 
 [node name="VolumeSliderSpeech" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
+mouse_filter = 1
+script = ExtResource("4_27s16")
 bus_name = "speech"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MuteToggle" parent="VBoxContainer/HBoxContainer4" instance=ExtResource("2_hdrv7")]
+layout_mode = 2
+text = "mykistä"
+bus_name = "master"

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://23drddl3ydow"]
 
-[ext_resource type="Script" path="res://scenes/pause-options-menu/mute_toggle.gd" id="1_3vfn6"]
+[ext_resource type="Script" path="res://scripts/pause-options/mute_toggle.gd" id="1_3vfn6"]
 
 [node name="MuteToggle" type="CheckButton"]
 anchors_preset = 15

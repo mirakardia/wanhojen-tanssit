@@ -48,6 +48,9 @@ var gibberish_profile : String = "default"
 		"speech" : bus_speech
 		}
 
+func test_sfx() -> void:
+	sfx_valinta_valikko.play()
+
 func set_volume(vol : float, bus : String = "master") -> void:
 	AudioServer.set_bus_volume_db(
 			SoundManager.bus_list[bus],
