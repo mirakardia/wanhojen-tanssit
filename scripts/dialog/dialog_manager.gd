@@ -145,7 +145,9 @@ func set_active_speaker(speaker : String) -> void:
 	if participants.has(speaker):
 		if participants[speaker].has("name"):
 			speaker_label.text = participants[speaker].name
-
+			SoundManager.set_gibberish_profile(participants[speaker].name)
+		else:
+			SoundManager.set_gibberish_profile()
 	if speaker_icons.has(speaker):
 		speaker_icon.texture = speaker_icons[speaker]
 	else: 
@@ -170,6 +172,12 @@ func run_effects (effects: Array) -> void:
 					update_reactions(effect.reactions)
 				"change_state":
 					game_manager.set_game_state(effect.key, effect.value)
+				"play_bgm":
+					SoundManager.play_bgm(effect.track)
+				"stop_bgm":
+					SoundManager.stop_bgm()
+				"set_gibberish_profile":
+					SoundManager.set_gibberish_profile(effect.profile)
 				_:
 					push_error("Unknown Effect at dialog" + current_dialog.name)
 		else:

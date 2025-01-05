@@ -1,34 +1,40 @@
-[gd_scene load_steps=42 format=3 uid="uid://dorta1wgomica"]
+[gd_scene load_steps=48 format=3 uid="uid://dorta1wgomica"]
 
 [ext_resource type="Script" path="res://scripts/sound_manager.gd" id="1_6wc0h"]
-[ext_resource type="AudioStream" uid="uid://c2bqjtbwifqmn" path="res://assets/kenney_interface-audio/glass_001.ogg" id="3_i8j2p"]
-[ext_resource type="AudioStream" uid="uid://dccelevfivt8k" path="res://assets/kenney_interface-audio/glass_002.ogg" id="4_aepwq"]
+[ext_resource type="AudioStream" uid="uid://ca7abe8l84hyx" path="res://assets/puheääniä/mit1.wav" id="3_vdfxy"]
+[ext_resource type="AudioStream" uid="uid://bpawxpktb0dnj" path="res://assets/puheääniä/mit2.wav" id="4_mvms0"]
+[ext_resource type="AudioStream" uid="uid://ckd1i16y8cetj" path="res://assets/puheääniä/mit3.wav" id="5_x51b0"]
 [ext_resource type="AudioStream" uid="uid://cfuf36yby8375" path="res://assets/kenney_ui-audio/switch24.ogg" id="6_5fmj3"]
+[ext_resource type="AudioStream" uid="uid://c3hcetetcybci" path="res://assets/puheääniä/mit4.wav" id="6_sar0k"]
+[ext_resource type="AudioStream" uid="uid://dyubak5wfxvki" path="res://assets/puheääniä/mit5.wav" id="7_5qgjc"]
 [ext_resource type="AudioStream" uid="uid://cll5vccwfq2vo" path="res://assets/bgm/Sakarin villapaita.mp3" id="7_uttcu"]
-[ext_resource type="AudioStream" uid="uid://cg8aiq135cgbq" path="res://assets/kenney_interface-audio/glass_006.ogg" id="8_a2vd7"]
+[ext_resource type="AudioStream" uid="uid://e7oupaqf45pg" path="res://assets/puheääniä/mit6.wav" id="8_6sse1"]
 [ext_resource type="AudioStream" uid="uid://b48ndi8fvmatj" path="res://assets/bgm/Molkky.wav" id="8_fb67g"]
 [ext_resource type="AudioStream" uid="uid://wdkoxahpn2cg" path="res://assets/kenney_interface-audio/glitch_001.ogg" id="9_5fas6"]
 [ext_resource type="AudioStream" uid="uid://d3ttemb62vhn4" path="res://assets/audio_pools/sakarin_puheet.tres" id="9_85kwh"]
 [ext_resource type="AudioStream" uid="uid://c71sl476jnkqh" path="res://assets/kenney_interface-audio/glitch_002.ogg" id="10_ks0f5"]
 [ext_resource type="AudioStream" uid="uid://c8yyi60apadq7" path="res://assets/kenney_interface-audio/glitch_003.ogg" id="11_57h2n"]
 [ext_resource type="AudioStream" uid="uid://rx5w70uv4ubc" path="res://assets/kenney_interface-audio/glitch_004.ogg" id="12_t61t8"]
-[ext_resource type="AudioStream" uid="uid://b7dqi3gdkmdgs" path="res://assets/kenney_interface-audio/scratch_001.ogg" id="13_eq8ei"]
-[ext_resource type="AudioStream" uid="uid://dy5hukh2kj1j6" path="res://assets/kenney_interface-audio/scratch_002.ogg" id="14_hlpxi"]
-[ext_resource type="AudioStream" uid="uid://c06tlp4j6g3nv" path="res://assets/kenney_interface-audio/scratch_003.ogg" id="15_fglud"]
-[ext_resource type="AudioStream" uid="uid://iq0j8fiuvwcn" path="res://assets/kenney_interface-audio/scratch_004.ogg" id="16_anj2x"]
-[ext_resource type="AudioStream" uid="uid://bk8yal7l1a1vm" path="res://assets/kenney_interface-audio/scratch_005.ogg" id="17_kl5y7"]
-[ext_resource type="AudioStream" uid="uid://dk3ohvk56p030" path="res://assets/kenney_interface-audio/error_001.ogg" id="18_l7ytq"]
-[ext_resource type="AudioStream" uid="uid://cy3pcm6pea6ll" path="res://assets/kenney_interface-audio/error_002.ogg" id="19_d3hcr"]
+[ext_resource type="AudioStream" uid="uid://biowe2q44xuax" path="res://assets/puheääniä/miau1.wav" id="13_ucgxb"]
+[ext_resource type="AudioStream" uid="uid://d0v3q5d6d7ynf" path="res://assets/puheääniä/miau2.wav" id="14_ne5sd"]
+[ext_resource type="AudioStream" uid="uid://ch7x0u83hch3i" path="res://assets/puheääniä/miau3.wav" id="15_gjm0f"]
+[ext_resource type="AudioStream" uid="uid://dkifaqg8rl7u2" path="res://assets/puheääniä/sakari_kutitus1.wav" id="15_nr2ni"]
+[ext_resource type="AudioStream" uid="uid://bjkx8xanoli5t" path="res://assets/puheääniä/miau4.wav" id="16_0s4pm"]
+[ext_resource type="AudioStream" uid="uid://b1v0djetku8dr" path="res://assets/puheääniä/sakari_kutitus2.wav" id="16_ioygt"]
+[ext_resource type="AudioStream" uid="uid://dqrlcr4t5hg" path="res://assets/puheääniä/sakari_kutitus3.wav" id="17_ona2g"]
+[ext_resource type="AudioStream" uid="uid://dop2ffxo5wjy8" path="res://assets/puheääniä/miau5.wav" id="17_xsb38"]
+[ext_resource type="AudioStream" uid="uid://b8u4if55js87e" path="res://assets/puheääniä/sakari_kutitus5.wav" id="18_3p6ku"]
+[ext_resource type="AudioStream" uid="uid://qwyuadoiuckf" path="res://assets/puheääniä/miau6.wav" id="18_vyquh"]
+[ext_resource type="AudioStream" uid="uid://dger5btj0w52d" path="res://assets/puheääniä/sakari_kutitus7.wav" id="19_lofa5"]
 [ext_resource type="AudioStream" uid="uid://df3054c5wig8a" path="res://assets/kenney_interface-audio/error_003.ogg" id="20_gbxdd"]
-[ext_resource type="AudioStream" uid="uid://b4nr2w6mpne78" path="res://assets/kenney_interface-audio/error_004.ogg" id="21_g4ofq"]
-[ext_resource type="AudioStream" uid="uid://d0bah8tg15owm" path="res://assets/kenney_interface-audio/error_005.ogg" id="22_5sed5"]
-[ext_resource type="AudioStream" uid="uid://ctk4bt3nrgfkc" path="res://assets/kenney_interface-audio/error_006.ogg" id="23_yte0f"]
-[ext_resource type="AudioStream" uid="uid://r41o7s2fvrkw" path="res://assets/kenney_interface-audio/error_007.ogg" id="24_kwae7"]
-[ext_resource type="AudioStream" uid="uid://6t45uv776hx5" path="res://assets/kenney_interface-audio/error_008.ogg" id="25_fokpk"]
+[ext_resource type="AudioStream" uid="uid://b3dsvoqp81020" path="res://assets/puheääniä/sakari_kutitus8.wav" id="20_vgklu"]
+[ext_resource type="AudioStream" uid="uid://c8gfas2ck4g2q" path="res://assets/puheääniä/terve1.wav" id="21_7ugav"]
+[ext_resource type="AudioStream" uid="uid://blh54313x3ykb" path="res://assets/puheääniä/terve2.wav" id="22_qynd7"]
+[ext_resource type="AudioStream" uid="uid://behi74fvffy8i" path="res://assets/puheääniä/terve3.wav" id="23_c0tgi"]
+[ext_resource type="AudioStream" uid="uid://dt0rc480dge18" path="res://assets/puheääniä/terve4.wav" id="24_l5t1f"]
+[ext_resource type="AudioStream" uid="uid://dwum3tjdjeo51" path="res://assets/puheääniä/terve5.wav" id="25_j461w"]
 [ext_resource type="AudioStream" uid="uid://bekfk50g7e5qh" path="res://assets/kenney_interface-audio/toggle_001.ogg" id="26_jipfs"]
-[ext_resource type="AudioStream" uid="uid://dlgw21d6gvr2k" path="res://assets/kenney_interface-audio/toggle_002.ogg" id="27_wiqqq"]
-[ext_resource type="AudioStream" uid="uid://4h3epftiiv5t" path="res://assets/kenney_interface-audio/toggle_003.ogg" id="28_un6ht"]
-[ext_resource type="AudioStream" uid="uid://dog1fbr0cuko2" path="res://assets/kenney_interface-audio/toggle_004.ogg" id="29_knulh"]
+[ext_resource type="AudioStream" uid="uid://bfc60qdckq084" path="res://assets/puheääniä/terve6.wav" id="26_tew5o"]
 [ext_resource type="AudioStream" uid="uid://b3vhneup2evp" path="res://assets/kenney_interface-audio/select_007.ogg" id="30_6s4ae"]
 [ext_resource type="AudioStream" uid="uid://cu6o5msmi0yw6" path="res://assets/kenney_interface-audio/open_001.ogg" id="31_6rv8j"]
 [ext_resource type="AudioStream" uid="uid://x0bhfyqkdr1b" path="res://assets/kenney_interface-audio/confirmation_001.ogg" id="33_gxvyb"]
@@ -37,13 +43,15 @@
 [ext_resource type="AudioStream" uid="uid://5rlkxd3i1ks5" path="res://assets/kenney_interface-audio/confirmation_004.ogg" id="36_jb8y1"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dkdwv"]
-random_pitch = 2.0
+random_pitch = 1.1
 random_volume_offset_db = 3.0
-streams_count = 4
-stream_0/stream = ExtResource("3_i8j2p")
-stream_1/stream = ExtResource("4_aepwq")
-stream_2/stream = ExtResource("8_a2vd7")
-stream_3/stream = ExtResource("8_a2vd7")
+streams_count = 6
+stream_0/stream = ExtResource("3_vdfxy")
+stream_1/stream = ExtResource("4_mvms0")
+stream_2/stream = ExtResource("5_x51b0")
+stream_3/stream = ExtResource("6_sar0k")
+stream_4/stream = ExtResource("7_5qgjc")
+stream_5/stream = ExtResource("8_6sse1")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_d6dg7"]
 random_pitch = 2.0
@@ -55,35 +63,38 @@ stream_2/stream = ExtResource("11_57h2n")
 stream_3/stream = ExtResource("12_t61t8")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v6ktu"]
-random_pitch = 2.0
+random_pitch = 1.22
 random_volume_offset_db = 3.0
-streams_count = 5
-stream_0/stream = ExtResource("13_eq8ei")
-stream_1/stream = ExtResource("14_hlpxi")
-stream_2/stream = ExtResource("15_fglud")
-stream_3/stream = ExtResource("16_anj2x")
-stream_4/stream = ExtResource("17_kl5y7")
+streams_count = 6
+stream_0/stream = ExtResource("13_ucgxb")
+stream_1/stream = ExtResource("14_ne5sd")
+stream_2/stream = ExtResource("15_gjm0f")
+stream_3/stream = ExtResource("16_0s4pm")
+stream_4/stream = ExtResource("17_xsb38")
+stream_5/stream = ExtResource("18_vyquh")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ap1am"]
-streams_count = 8
-stream_0/stream = ExtResource("18_l7ytq")
-stream_1/stream = ExtResource("19_d3hcr")
-stream_2/stream = ExtResource("20_gbxdd")
-stream_3/stream = ExtResource("21_g4ofq")
-stream_4/stream = ExtResource("22_5sed5")
-stream_5/stream = ExtResource("23_yte0f")
-stream_6/stream = ExtResource("24_kwae7")
-stream_7/stream = ExtResource("25_fokpk")
+random_pitch = 1.25
+random_volume_offset_db = 3.0
+streams_count = 6
+stream_0/stream = ExtResource("15_nr2ni")
+stream_1/stream = ExtResource("16_ioygt")
+stream_2/stream = ExtResource("17_ona2g")
+stream_3/stream = ExtResource("18_3p6ku")
+stream_4/stream = ExtResource("19_lofa5")
+stream_5/stream = ExtResource("20_vgklu")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_631o4"]
-random_pitch = 2.0
+random_pitch = 1.25
 random_volume_offset_db = 3.0
-streams_count = 4
-stream_0/stream = ExtResource("26_jipfs")
-stream_1/stream = ExtResource("27_wiqqq")
-stream_2/stream = ExtResource("28_un6ht")
+streams_count = 6
+stream_0/stream = ExtResource("21_7ugav")
+stream_1/stream = ExtResource("22_qynd7")
+stream_2/stream = ExtResource("23_c0tgi")
 stream_2/weight = 0.0
-stream_3/stream = ExtResource("29_knulh")
+stream_3/stream = ExtResource("24_l5t1f")
+stream_4/stream = ExtResource("25_j461w")
+stream_5/stream = ExtResource("26_tew5o")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hkuhf"]
 streams_count = 4

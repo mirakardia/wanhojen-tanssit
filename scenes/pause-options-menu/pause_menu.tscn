@@ -6,91 +6,198 @@
 [ext_resource type="Script" path="res://scenes/pause-options-menu/volume_slider.gd" id="4_27s16"]
 
 [node name="PanelContainer" type="PanelContainer"]
-offset_left = 203.0
-offset_top = 153.0
-offset_right = 1260.0
-offset_bottom = 877.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -504.0
+offset_top = -196.0
+offset_right = 505.0
+offset_bottom = 335.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.52
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
-size_flags_stretch_ratio = 0.0
 
-[node name="LabelMaster" type="Label" parent="VBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 11.17
+
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="otsikko" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Asetukset"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LabelMaster" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Master"
 horizontal_alignment = 1
 
-[node name="VolumeSliderMaster" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
+[node name="VolumeSliderMaster" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 bus_name = "master"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
 
-[node name="MuteToggle" parent="VBoxContainer/HBoxContainer" instance=ExtResource("2_hdrv7")]
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MuteToggle" parent="HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_hdrv7")]
+layout_mode = 2
+size_flags_horizontal = 6
 text = "mykistä"
 bus_name = "master"
 
-[node name="LabelBgm" type="Label" parent="VBoxContainer"]
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator4" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator4" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LabelBgm" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Musiikki"
 horizontal_alignment = 1
 
-[node name="VolumeSliderBgm" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
+[node name="VolumeSliderBgm" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 bus_name = "bgm"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.75
 
-[node name="MuteToggle" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("2_hdrv7")]
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MuteToggle" parent="HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_hdrv7")]
+layout_mode = 2
+size_flags_horizontal = 6
 text = "mykistä"
 bus_name = "bgm"
 
-[node name="SoundTest" parent="VBoxContainer/HBoxContainer2" instance=ExtResource("3_505rn")]
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SoundTest" parent="HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_505rn")]
+layout_mode = 2
+size_flags_horizontal = 3
 toggle_mode = false
 test_audio = "bgm"
 
-[node name="LabelSfx" type="Label" parent="VBoxContainer"]
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator5" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LabelSfx" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Efektit"
 horizontal_alignment = 1
 
-[node name="VolumeSliderSfx" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
+[node name="VolumeSliderSfx" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 bus_name = "sfx"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="MuteToggle" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("2_hdrv7")]
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MuteToggle" parent="HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_hdrv7")]
+layout_mode = 2
+size_flags_horizontal = 6
 text = "mykistä"
 bus_name = "sfx"
 
-[node name="SoundTest" parent="VBoxContainer/HBoxContainer3" instance=ExtResource("3_505rn")]
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SoundTest" parent="HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_505rn")]
+layout_mode = 2
+size_flags_horizontal = 3
 toggle_mode = false
 test_audio = "sfx"
 
-[node name="LaberSpeech" type="Label" parent="VBoxContainer"]
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator6" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LaberSpeech" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Puhe"
 horizontal_alignment = 1
 
-[node name="VolumeSliderSpeech" parent="VBoxContainer" instance=ExtResource("1_j2cf2")]
+[node name="VolumeSliderSpeech" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("4_27s16")
 bus_name = "speech"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="MuteToggle" parent="VBoxContainer/HBoxContainer4" instance=ExtResource("2_hdrv7")]
+[node name="MuteToggle" parent="HBoxContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("2_hdrv7")]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "mykistä"
 bus_name = "master"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

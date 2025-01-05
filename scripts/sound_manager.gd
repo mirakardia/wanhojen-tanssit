@@ -85,13 +85,15 @@ func speak_gibberish() -> void:
 		match gibberish_profile:
 			"molkky", "mölkky", "mölkkypölkky", "mölkky-pölkky":
 				sfx_puhe_molkky.play()
+			"kimble":
+				sfx_puhe_mato.play()
 			"tähti", "tahti", "afrikka", "afrikantähti", "afrikan tähti", "afrikan":
 				sfx_puhe_afrikka.play()
-			"birb", "bird", "angsty", "angsty birb", "angry bird":
-				sfx_puhe_birb.play()
+			"angsty_birb", "birb", "bird", "angsty", "angsty_birb", "angry bird":
+				sfx_puhe_villa.play()
 			"pallomato", "mato ja pallo", "pallo ja mato", "bounce ja mato", "mato ja bounce":
 				sfx_puhe_pallomato.play()
-			"pallo", "bounce":
+			"pallo", "bounce", "kimble":
 				sfx_puhe_pallo.play()
 			"mato":
 				sfx_puhe_mato.play()

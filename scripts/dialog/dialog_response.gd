@@ -14,7 +14,8 @@ func _process(_delta: float) -> void:
 	
 func set_data(_data: Dictionary, _game_manager):
 	data = _data
-	$Container/Text.text = data.text
+	if data.has("text"):
+		$Container/Text.text = data.text
 	game_manager = _game_manager
 	if data.has("requirements"):
 		if not check_requirements(data.requirements):
