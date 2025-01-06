@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/dialog/line_util.gd" id="4_4yij5"]
 
 [node name="dialog" type="CanvasLayer" node_paths=PackedStringArray("dialog_root")]
+visible = false
 script = ExtResource("1_4h35n")
 dialog_root = NodePath("DialogRoot")
 speaker_icons = {
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="DialogBackground" type="ColorRect" parent="DialogRoot"]
 layout_mode = 1
@@ -28,6 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.05, 0.05, 0.05, 0.784314)
 
 [node name="DialogBoxBakground" type="ColorRect" parent="DialogRoot"]
@@ -39,6 +42,7 @@ anchor_right = 0.766667
 anchor_bottom = 0.837037
 offset_left = 1.52588e-05
 offset_bottom = 6.10352e-05
+mouse_filter = 2
 color = Color(0.366595, 0.366595, 0.366595, 1)
 metadata/_edit_use_anchors_ = true
 

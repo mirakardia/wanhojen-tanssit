@@ -20,6 +20,7 @@ config/icon="res://assets/icon.svg"
 SoundManager="*res://scenes/sound_manager.tscn"
 GameManager="*res://scenes/game_manager.tscn"
 DialogManager="*res://dialog_test.tscn"
+PauseMenu="*res://scenes/pause-options-menu/pause_menu.tscn"
 
 [display]
 
