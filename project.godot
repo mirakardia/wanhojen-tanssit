@@ -30,6 +30,10 @@ window/size/borderless=true
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
+[global_group]
+
+player=""
+
 [input]
 
 up={

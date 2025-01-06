@@ -130,13 +130,16 @@ func start_dialog (dialog_name: String) -> void:
 func end_dialog() -> void:
 	var tween = dialog_root.create_tween()
 	var transparent_white = Color(1,1,1,0)
-	self.visible = false
-	in_dialog = false
 	tween.tween_property(dialog_root, "modulate", transparent_white, 1)
 	tween.tween_callback(cleanup_participants)
 	tween.tween_callback(game_manager.emit_signal.bind("close_dialog", current_dialog.name))
 	
 func cleanup_participants() -> void:
+	self.visible = false
+	in_dialog = false
+	current_dialog.clear()
+	response_list.visible = false
+	set_active_speaker("")
 	for participant in current_participants.keys():
 		current_participants[participant].call_deferred("free")
 		current_participants.erase(participant)
@@ -187,6 +190,8 @@ func run_effects (effects: Array) -> void:
 					SoundManager.stop_bgm()
 				"set_gibberish_profile":
 					SoundManager.set_gibberish_profile(effect.profile)
+				"change_scene":
+					game_manager.change_scene(effect.scene)
 				_:
 					push_error("Unknown Effect at dialog" + current_dialog.name)
 		else:
@@ -251,6 +256,7 @@ func show_responses (responses: Array) -> void:
 		if not child.focus_mode == Control.FocusMode.FOCUS_NONE:
 			child.grab_focus()
 			break
+
 func update_reactions(reactions: Dictionary):
 	for participant in reactions.keys():
 		game_manager.update_relation(participant, reactions[participant])

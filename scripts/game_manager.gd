@@ -16,6 +16,11 @@ func get_game_state(key):
 		return game_state[key]
 	return null
 
+func empty():
+	pass
+
+var interaction_events : Array[Callable]
+
 signal open_dialog_scene(name: String)
 signal close_dialog(name: String)
 
@@ -27,8 +32,14 @@ func _input(event: InputEvent) -> void:
 		if event.is_action_pressed("ui_cancel"):
 			menu.visible = not menu.visible
 			menu_state = menu.visible
-#		if event.is_action_pressed("ui_text_newline"):
-#			emit_signal("open_dialog_scene", "test")
+		if event.is_action_pressed("ui_accept") and not DialogManager.in_dialog:
+			for ievent in interaction_events:
+				ievent.call()
+
+func change_scene(new_pos: Vector2):
+	var player = get_tree().get_nodes_in_group("player")[0]
+	player.position = new_pos
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
