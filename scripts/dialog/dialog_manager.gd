@@ -101,6 +101,8 @@ func skip_or_next() -> void:
 func start_scene (scene_name: String) -> void:
 	var file = FileAccess.get_file_as_string("res://assets/dialogs/"+scene_name+".json")
 	dialog_data = JSON.parse_string(file)
+	in_dialog = true;
+	self.visible = true
 	var tween = dialog_root.create_tween()
 	tween.tween_property(dialog_root, "modulate", Color.WHITE, 1)
 	tween.tween_callback(start_dialog.bind(dialog_data.start))
@@ -116,7 +118,6 @@ func find_dialog(dialog_name: String) -> Dictionary:
 
 func start_dialog (dialog_name: String) -> void:
 	var dialog = find_dialog(dialog_name)
-	in_dialog = true;
 	current_dialog = dialog
 	dialog_box.visible = true
 	response_list.visible = false
@@ -131,6 +132,7 @@ func start_dialog (dialog_name: String) -> void:
 func end_dialog() -> void:
 	var tween = dialog_root.create_tween()
 	var transparent_white = Color(1,1,1,0)
+	self.visible = false
 	in_dialog = false
 	tween.tween_property(dialog_root, "modulate", transparent_white, 1)
 	tween.tween_callback(cleanup_participants)
