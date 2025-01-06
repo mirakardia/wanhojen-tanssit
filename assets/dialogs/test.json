@@ -71,6 +71,9 @@
 				{
 					"text": "Pallo",
 					"next": "pallo"
+				},
+				{
+					"text": "Exit"
 				}
 			]
 		},

@@ -24,7 +24,7 @@ var current_participants : Dictionary
 
 var text_speed : int = 1
 
-
+var in_dialog: bool = false
 
 func _ready() -> void:
 	load_participant_data()
@@ -61,6 +61,8 @@ func _process(_delta: float) -> void:
 		SoundManager.speak_gibberish()
 		
 func _input(event: InputEvent) -> void:
+	if not in_dialog:
+		return
 	if event is InputEventKey:
 		if event.is_action_pressed("ui_accept"):
 			skip_or_next()
@@ -97,7 +99,9 @@ func skip_or_next() -> void:
 func start_scene (scene_name: String) -> void:
 	var file = FileAccess.get_file_as_string("res://assets/dialogs/"+scene_name+".json")
 	dialog_data = JSON.parse_string(file)
-	start_dialog(dialog_data.start)
+	var tween = dialog_root.create_tween()
+	tween.tween_property(dialog_root, "modulate", Color.WHITE, 1)
+	tween.tween_callback(start_dialog.bind(dialog_data.start))
 
 
 func find_dialog(dialog_name: String) -> Dictionary:
@@ -111,6 +115,7 @@ const player_name = "Minä"
 func start_dialog (dialog_name: String) -> void:
 	print("test")
 	var dialog = find_dialog(dialog_name)
+	in_dialog = true;
 	current_dialog = dialog
 	dialog_box.visible = true
 	response_list.visible = false
@@ -122,7 +127,17 @@ func start_dialog (dialog_name: String) -> void:
 	pass
 
 func end_dialog() -> void:
-	print("ending dialog")
+	var tween = dialog_root.create_tween()
+	var transparent_white = Color(1,1,1,0)
+	in_dialog = false
+	tween.tween_property(dialog_root, "modulate", transparent_white, 1)
+	tween.tween_callback(cleanup_participants)
+	tween.tween_callback(game_manager.emit_signal.bind("close_dialog", current_dialog.name))
+	
+func cleanup_participants() -> void:
+	for participant in current_participants.keys():
+		current_participants[participant].call_deferred("free")
+		current_participants.erase(participant)
 
 func set_active_speaker(speaker : String) -> void:
 

@@ -21,13 +21,16 @@ focus_mode = 2
 mouse_filter = 1
 theme = SubResource("Theme_00qqs")
 script = ExtResource("1_7a87s")
+metadata/_edit_use_anchors_ = true
 
 [node name="Container" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_right = 300.0
-offset_bottom = 40.0
+anchor_right = 0.211111
+anchor_bottom = 0.037037
+offset_right = -4.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_2mkvo")
+metadata/_edit_use_anchors_ = true
 
 [node name="Text" type="RichTextLabel" parent="Container"]
 custom_minimum_size = Vector2(300, 8)

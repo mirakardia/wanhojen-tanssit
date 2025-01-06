@@ -5,93 +5,45 @@
 [ext_resource type="Texture2D" uid="uid://bbi1ovscu3jvs" path="res://assets/icon.svg" id="3_8b7tg"]
 [ext_resource type="Script" path="res://scripts/dialog/line_util.gd" id="4_4yij5"]
 
-[node name="Node" type="Control" node_paths=PackedStringArray("dialog_root")]
-layout_mode = 3
-anchors_preset = 0
+[node name="dialog" type="CanvasLayer" node_paths=PackedStringArray("dialog_root")]
 script = ExtResource("1_4h35n")
-dialog_root = NodePath(".")
+dialog_root = NodePath("DialogRoot")
 speaker_icons = {
 "%s": ExtResource("3_8b7tg")
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 234.0
-offset_top = 661.0
-offset_right = 1104.0
-offset_bottom = 904.0
+[node name="DialogRoot" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogBackground" type="ColorRect" parent="DialogRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.05, 0.784314)
+
+[node name="DialogBoxBakground" type="ColorRect" parent="DialogRoot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1625
+anchor_top = 0.612037
+anchor_right = 0.766667
+anchor_bottom = 0.837037
+offset_left = 1.52588e-05
+offset_bottom = 6.10352e-05
 color = Color(0.366595, 0.366595, 0.366595, 1)
+metadata/_edit_use_anchors_ = true
 
-[node name="DialogBox" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 262.0
-offset_top = 667.0
-offset_right = 1023.0
-offset_bottom = 893.0
-bbcode_enabled = true
-text = "sielence"
-visible_characters_behavior = 1
-
-[node name="SpeakerLabel" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 256.0
-offset_top = 632.0
-offset_right = 495.0
-offset_bottom = 672.0
-theme_override_font_sizes/normal_font_size = 20
-text = "None"
-
-[node name="Scroll" type="ScrollContainer" parent="."]
-layout_mode = 2
-offset_left = 251.0
-offset_top = 672.0
-offset_right = 1089.0
-offset_bottom = 888.0
-follow_focus = true
-metadata/_edit_group_ = true
-
-[node name="Responses" type="VBoxContainer" parent="Scroll"]
+[node name="SpeakerIcon" type="TextureRect" parent="DialogRoot"]
 visible = false
-layout_mode = 2
-alignment = 2
-
-[node name="Response" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response5" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response2" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response3" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response4" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response6" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response7" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response8" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response9" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response10" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response11" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="Response12" parent="Scroll/Responses" instance=ExtResource("2_vudki")]
-layout_mode = 2
-
-[node name="SpeakerIcon" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 173.0
 offset_top = 619.0
@@ -100,7 +52,82 @@ offset_bottom = 699.0
 texture = ExtResource("3_8b7tg")
 expand_mode = 3
 
-[node name="ParticipantRow" type="Line2D" parent="."]
+[node name="DialogBox" type="RichTextLabel" parent="DialogRoot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.181944
+anchor_top = 0.617593
+anchor_right = 0.710417
+anchor_bottom = 0.826852
+offset_right = 6.10352e-05
+bbcode_enabled = true
+visible_characters_behavior = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SpeakerLabel" type="RichTextLabel" parent="DialogRoot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177778
+anchor_top = 0.585185
+anchor_right = 0.34375
+anchor_bottom = 0.622222
+offset_bottom = 6.10352e-05
+theme_override_font_sizes/normal_font_size = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="Scroll" type="ScrollContainer" parent="DialogRoot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.174306
+anchor_top = 0.622222
+anchor_right = 0.75625
+anchor_bottom = 0.822222
+follow_focus = true
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Responses" type="VBoxContainer" parent="DialogRoot/Scroll"]
+visible = false
+layout_mode = 2
+alignment = 2
+
+[node name="Response" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response5" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response2" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response3" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response4" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response6" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response7" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response8" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response9" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response10" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response11" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="Response12" parent="DialogRoot/Scroll/Responses" instance=ExtResource("2_vudki")]
+layout_mode = 2
+
+[node name="ParticipantRow" type="Line2D" parent="DialogRoot"]
 points = PackedVector2Array(1383, 610, 60, 608)
 width = 0.0
 script = ExtResource("4_4yij5")
