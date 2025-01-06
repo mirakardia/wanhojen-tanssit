@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://e3atnr4jvvv0" path="res://scenes/pause-options-menu/volume_slider.tscn" id="1_j2cf2"]
 [ext_resource type="PackedScene" uid="uid://23drddl3ydow" path="res://scenes/pause-options-menu/mute_toggle.tscn" id="2_hdrv7"]
 [ext_resource type="Script" path="res://scenes/pause-options-menu/volume_slider.gd" id="4_27s16"]
-[ext_resource type="PackedScene" path="res://scenes/pause-options-menu/inventory_item.tscn" id="4_bbt8x"]
+[ext_resource type="PackedScene" uid="uid://dejuqhlqgf3lm" path="res://scenes/pause-options-menu/inventory_item.tscn" id="4_bbt8x"]
 [ext_resource type="Script" path="res://scenes/pause-options-menu/volume_slider-sfx.gd" id="4_ecjb2"]
 
 [node name="PanelContainer" type="CanvasLayer"]

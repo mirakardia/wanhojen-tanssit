@@ -9,7 +9,10 @@ func update_relation(speaker, value):
 	game_state[speaker] += value
 
 func set_game_state(key, value):
-	game_state[key] = value
+	if value == "true":
+		game_state[key] = true
+	else:
+		game_state[key] = value
 
 func get_game_state(key):
 	if game_state.has(key):

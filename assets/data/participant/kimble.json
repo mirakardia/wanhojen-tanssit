@@ -1,5 +1,5 @@
 {
-	"offset": 20,
+	"offset": 0,
 	"name": "Kim",
 	"neutral": "neutral",
 	"reaction_origin": {
@@ -8,7 +8,7 @@
 	},
 	"emotes": {
 		"positive": "assets/sprites/angsty_bird/dialog/angsty_bird_positive.png",
-		"neutral": "assets/sprites/angsty_bird/dialog/angsty_bird_neutral.png",
+		"neutral": "assets/sprites/player/dialog/kimble.png",
 		"negative": "assets/sprites/angsty_bird/dialog/angsty_bird_negative.png"
 	}
 }

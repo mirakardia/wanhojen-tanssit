@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhpjsvi88cwd5"]
+[gd_scene load_steps=5 format=3 uid="uid://bhpjsvi88cwd5"]
 
 [ext_resource type="Script" path="res://scripts/interactable.gd" id="1_bhrdr"]
-[ext_resource type="Texture2D" uid="uid://bxme48bxqj4jq" path="res://assets/sprites/angsty_bird/overworld/angsty_bird.png" id="1_mysn3"]
 [ext_resource type="Texture2D" uid="uid://c8kh5psthmfeh" path="res://assets/sprites/villapaita/overworld/villapaita.png" id="2_cxxlb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8iao"]
@@ -31,9 +30,10 @@ shape = SubResource("CapsuleShape2D_e8iao")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
-texture = ExtResource("1_mysn3")
-hframes = 4
+texture = ExtResource("2_cxxlb")
+hframes = 5
 vframes = 5
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

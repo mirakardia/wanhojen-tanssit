@@ -6,7 +6,7 @@ extends Node
 @onready var sprite : Sprite2D = get_node("Sprite2D")
 @onready var game_manager : GameManager = get_node("/root/GameManager")
 
-enum INTERACTION_TYPE {DIALOG, CHANGE_STATE, CHANGE_SCENE} 
+enum INTERACTION_TYPE {DIALOG, CHANGE_STATE, CHANGE_SCENE, NONE} 
 var type : INTERACTION_TYPE:
 	set (s):
 		type = s
@@ -49,8 +49,10 @@ func event():
 	match type:
 		INTERACTION_TYPE.DIALOG:
 			game_manager.emit_signal("open_dialog_scene", dialog)
+			type = INTERACTION_TYPE.NONE
 		INTERACTION_TYPE.CHANGE_STATE:
 			game_manager.set_game_state(key, value)
+			SoundManager.test_sfx()
 		INTERACTION_TYPE.CHANGE_SCENE:
 			game_manager.change_scene(scene)
 
