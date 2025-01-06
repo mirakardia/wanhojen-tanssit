@@ -1,203 +1,309 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5mgi7o2rejxc"]
+[gd_scene load_steps=6 format=3 uid="uid://b5mgi7o2rejxc"]
 
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bf3ox"]
 [ext_resource type="PackedScene" uid="uid://e3atnr4jvvv0" path="res://scenes/pause-options-menu/volume_slider.tscn" id="1_j2cf2"]
 [ext_resource type="PackedScene" uid="uid://23drddl3ydow" path="res://scenes/pause-options-menu/mute_toggle.tscn" id="2_hdrv7"]
-[ext_resource type="PackedScene" uid="uid://ctkaoyni412ka" path="res://scenes/pause-options-menu/sound_test.tscn" id="3_505rn"]
 [ext_resource type="Script" path="res://scenes/pause-options-menu/volume_slider.gd" id="4_27s16"]
+[ext_resource type="PackedScene" uid="uid://dejuqhlqgf3lm" path="res://scenes/pause-options-menu/inventory_item.tscn" id="4_bbt8x"]
 
-[node name="PanelContainer" type="PanelContainer"]
+[node name="PanelContainer" type="Control"]
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -504.0
-offset_top = -196.0
-offset_right = 505.0
-offset_bottom = 335.0
+offset_left = -756.0
+offset_top = -489.0
+offset_right = 449.0
+offset_bottom = 293.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 6.52
+script = ExtResource("1_bf3ox")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 45.0
+offset_right = 889.0
+offset_bottom = 962.0
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 120.0
+offset_right = 817.0
+offset_bottom = 662.0
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 240.0
+offset_right = 764.0
+offset_bottom = 361.0
+
+[node name="Panel4" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 371.0
+offset_right = 763.0
+offset_bottom = 492.0
+
+[node name="Panel5" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 498.0
+offset_right = 764.0
+offset_bottom = 619.0
+
+[node name="otsikko-panel" type="PanelContainer" parent="."]
 layout_mode = 2
+offset_left = 265.0
+offset_top = 50.0
+offset_right = 753.0
+offset_bottom = 96.0
 
-[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 11.17
-
-[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="otsikko" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="otsikko" type="Label" parent="otsikko-panel"]
 layout_mode = 2
 text = "Asetukset"
 horizontal_alignment = 1
 
-[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+[node name="master-otsikko" type="PanelContainer" parent="."]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+offset_left = 269.0
+offset_top = 121.0
+offset_right = 747.0
+offset_bottom = 167.0
 
-[node name="LabelMaster" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="otsikko" type="Label" parent="master-otsikko"]
 layout_mode = 2
-text = "Master"
+text = "Ääniasetukset"
 horizontal_alignment = 1
 
-[node name="VolumeSliderMaster" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_j2cf2")]
+[node name="master-slider" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 182.0
+offset_right = 747.0
+offset_bottom = 219.0
+
+[node name="VolumeSliderMaster" parent="master-slider" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 bus_name = "master"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.0
+[node name="master-toggle" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 182.0
+offset_right = 393.0
+offset_bottom = 219.0
 
-[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MuteToggle" parent="HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_hdrv7")]
+[node name="MuteToggle" parent="master-toggle" instance=ExtResource("2_hdrv7")]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "mykistä"
 bus_name = "master"
 
-[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="bgm-otsikko2" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 366.0
+offset_top = 250.0
+offset_right = 607.0
+offset_bottom = 299.0
 
-[node name="VSeparator4" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="otsikko" type="Label" parent="bgm-otsikko2"]
 layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HSeparator4" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="LabelBgm" type="Label" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Musiikki"
+text = "Musiikki
+ "
 horizontal_alignment = 1
 
-[node name="VolumeSliderBgm" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_j2cf2")]
+[node name="bgm-slider2" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 317.0
+offset_right = 747.0
+offset_bottom = 347.0
+
+[node name="VolumeSliderBgm" parent="bgm-slider2" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 bus_name = "bgm"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 4.75
+[node name="bgm-toggle2" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 306.0
+offset_right = 432.0
+offset_bottom = 351.0
 
-[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MuteToggle" parent="HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("2_hdrv7")]
+[node name="MuteToggle2" parent="bgm-toggle2" instance=ExtResource("2_hdrv7")]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "mykistä"
-bus_name = "bgm"
+bus_name = "master"
 
-[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="sfx-otsikko3" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 385.0
+offset_right = 598.0
+offset_bottom = 434.0
 
-[node name="SoundTest" parent="HBoxContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_505rn")]
+[node name="otsikko" type="Label" parent="sfx-otsikko3"]
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = false
-test_audio = "bgm"
-
-[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HSeparator5" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="LabelSfx" type="Label" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Efektit"
+text = "Ääniefektit
+ "
 horizontal_alignment = 1
 
-[node name="VolumeSliderSfx" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_j2cf2")]
+[node name="sfx-slider3" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 439.0
+offset_right = 747.0
+offset_bottom = 482.0
+
+[node name="VolumeSliderSfx" parent="sfx-slider3" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 bus_name = "sfx"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
+[node name="sfx-toggle3" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 439.0
+offset_right = 432.0
+offset_bottom = 476.0
 
-[node name="VSeparator2" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="MuteToggle" parent="HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("2_hdrv7")]
+[node name="MuteToggle" parent="sfx-toggle3" instance=ExtResource("2_hdrv7")]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "mykistä"
 bus_name = "sfx"
 
-[node name="VSeparator" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="puhe-otsikko4" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 502.0
+offset_right = 600.0
+offset_bottom = 551.0
 
-[node name="SoundTest" parent="HBoxContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_505rn")]
+[node name="otsikko" type="Label" parent="puhe-otsikko4"]
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = false
-test_audio = "sfx"
-
-[node name="VSeparator3" type="VSeparator" parent="HBoxContainer/VBoxContainer/HBoxContainer3"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HSeparator6" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="LaberSpeech" type="Label" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Puhe"
+text = "Puhe
+ "
 horizontal_alignment = 1
 
-[node name="VolumeSliderSpeech" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_j2cf2")]
+[node name="puhe-slider4" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 557.0
+offset_right = 747.0
+offset_bottom = 587.0
+
+[node name="VolumeSliderSpeech" parent="puhe-slider4" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("4_27s16")
 bus_name = "speech"
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
+[node name="puhe-toggle4" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 559.0
+offset_right = 432.0
+offset_bottom = 590.0
 
-[node name="MuteToggle" parent="HBoxContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("2_hdrv7")]
+[node name="MuteToggle" parent="puhe-toggle4" instance=ExtResource("2_hdrv7")]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "mykistä"
 bus_name = "master"
 
-[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="Panel6" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 951.0
+offset_top = 45.0
+offset_right = 1414.0
+offset_bottom = 970.0
 
-[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+[node name="otsikko-panel2" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 50.0
+offset_right = 1392.0
+offset_bottom = 96.0
+
+[node name="otsikko" type="Label" parent="otsikko-panel2"]
 layout_mode = 2
-size_flags_horizontal = 3
+text = "Inventaario"
+horizontal_alignment = 1
+
+[node name="otsikko-panel3" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 123.0
+offset_right = 1392.0
+offset_bottom = 903.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="otsikko-panel3"]
+layout_mode = 2
+
+[node name="otsikko" type="Label" parent="otsikko-panel3/VBoxContainer"]
+layout_mode = 2
+text = "
+Juorut
+
+"
+horizontal_alignment = 1
+
+[node name="InventoryItem" parent="otsikko-panel3/VBoxContainer" instance=ExtResource("4_bbt8x")]
+layout_mode = 2
+text = "    Juoru Tähdestä 1 (Hihittäjän juoru)"
+item = "hihitysjuoru1"
+
+[node name="InventoryItem2" parent="otsikko-panel3/VBoxContainer" instance=ExtResource("4_bbt8x")]
+layout_mode = 2
+text = "    Juoru Tähdestä 1 (Hihittäjän juoru)"
+item = "hihitysjuoru2"
+
+[node name="InventoryItem3" parent="otsikko-panel3/VBoxContainer" instance=ExtResource("4_bbt8x")]
+layout_mode = 2
+text = "    Juoru Angsty Birbistä (kuvisopettajan juoru)"
+item = "kuvisjuoru"
+
+[node name="HSeparator" type="HSeparator" parent="otsikko-panel3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="otsikko2" type="Label" parent="otsikko-panel3/VBoxContainer"]
+layout_mode = 2
+text = "Esineet
+
+"
+horizontal_alignment = 1
+
+[node name="InventoryItem4" parent="otsikko-panel3/VBoxContainer" instance=ExtResource("4_bbt8x")]
+layout_mode = 2
+text = "    Levy"
+item = "levy"
+
+[node name="InventoryItem5" parent="otsikko-panel3/VBoxContainer" instance=ExtResource("4_bbt8x")]
+layout_mode = 2
+text = "    Puhelin"
+item = "puhelin"
+
+[node name="InventoryItem6" parent="otsikko-panel3/VBoxContainer" instance=ExtResource("4_bbt8x")]
+layout_mode = 2
+text = "    Hevosenkenkä"
+item = "hevosenkenkä"
+
+[node name="InventoryItem7" parent="otsikko-panel3/VBoxContainer" instance=ExtResource("4_bbt8x")]
+layout_mode = 2
+text = "    Kaljat"
+item = "kaljat"
+
+[node name="InventoryItem8" parent="otsikko-panel3/VBoxContainer" instance=ExtResource("4_bbt8x")]
+layout_mode = 2
+text = "    Albumi"
+item = "albumi"
