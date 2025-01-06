@@ -28,9 +28,10 @@ var text_speed : int = 1
 
 func _ready() -> void:
 	load_participant_data()
+	game_manager.open_dialog_scene.connect(start_scene)
 
-	start_scene("test")
-	start_dialog(dialog_data.start)
+	game_manager.emit_signal("open_dialog_scene","test")
+	
 
 
 func load_participant_data() -> void:
@@ -46,6 +47,8 @@ func load_participant_data() -> void:
 			json.emotes[emote] = emote_texture
 		
 		json.reaction_origin = Vector2(json.reaction_origin.x,json.reaction_origin.y)
+
+
 
 		participants[file.trim_suffix(".json")] = json
 
@@ -94,6 +97,8 @@ func skip_or_next() -> void:
 func start_scene (scene_name: String) -> void:
 	var file = FileAccess.get_file_as_string("res://assets/dialogs/"+scene_name+".json")
 	dialog_data = JSON.parse_string(file)
+	start_dialog(dialog_data.start)
+
 
 func find_dialog(dialog_name: String) -> Dictionary:
 	for dialog in dialog_data.dialog:
@@ -104,6 +109,7 @@ func find_dialog(dialog_name: String) -> Dictionary:
 const player_name = "Minä"
 
 func start_dialog (dialog_name: String) -> void:
+	print("test")
 	var dialog = find_dialog(dialog_name)
 	current_dialog = dialog
 	dialog_box.visible = true
