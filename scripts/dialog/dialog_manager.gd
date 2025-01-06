@@ -30,7 +30,7 @@ func _ready() -> void:
 	load_participant_data()
 	game_manager.open_dialog_scene.connect(start_scene)
 
-	# game_manager.emit_signal("open_dialog_scene","test")
+	#game_manager.emit_signal("open_dialog_scene","test")
 	
 
 
