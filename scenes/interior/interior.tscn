@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://cdl7n3m07ww5g"]
+[gd_scene load_steps=6 format=4 uid="uid://cdl7n3m07ww5g"]
 
 [ext_resource type="Texture2D" uid="uid://c7wxd8dq5p2dm" path="res://assets/tiles/school.png" id="1_phml3"]
 [ext_resource type="PackedScene" uid="uid://cg16safufilmg" path="res://scenes/player/player.tscn" id="2_fpj3q"]
 [ext_resource type="PackedScene" uid="uid://buo2spyy3ocd3" path="res://scenes/props/props.tscn" id="3_0hpnm"]
-[ext_resource type="PackedScene" uid="uid://bhpjsvi88cwd5" path="res://scenes/npc/npc.tscn" id="4_7qwt0"]
-[ext_resource type="Texture2D" uid="uid://cekddfbdrj7n1" path="res://assets/sprites/afrikan_tahti/overworld/afrikan_tahti.png" id="5_h28s4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_13ygj"]
 texture = ExtResource("1_phml3")
@@ -447,12 +445,3 @@ tile_set = SubResource("TileSet_p2ftx")
 
 [node name="Props" parent="." instance=ExtResource("3_0hpnm")]
 tile_map_data = PackedByteArray("AABUAO//AAAAAAEAAABWAO3/AAAAAAEAAAAFAAQAAQABAAMAAAAFAAUAAQABAAQAAAAHAAQAAQAAAAAAAAAHAAUAAQAAAAEAAAAIAAQAAQABAAAAAAAIAAUAAQABAAEAAAALAAQAAQACAAAAAAALAAUAAQACAAEAAAAMAAQAAQADAAAAAAAMAAUAAQADAAEAAAAJAAQAAQAKAAQAAAAJAAUAAQAKAAUAAAAKAAQAAQAKAAQAAAAKAAUAAQAKAAUAAAAEAAgAAQAEAAAAAAAEAAkAAQAEAAEAAAAFAAgAAQAFAAAAAAAFAAkAAQAFAAEAAAANAAkAAQAHAAIAAAANAAoAAQAHAAMAAAAOAAkAAQAIAAIAAAAOAAoAAQAIAAMAAAAEAAsAAQACAAMAAAANAAYAAQACAAIAAAAGAAQAAQAGAAQAAAANAAUAAQAPAAQAAAANAAcAAQAPAAQAAAAGAAUAAQAEAAQAAAAIAAcAAQAAAAUAAAAJAAcAAQABAAUAAAAKAAcAAQACAAUAAAALAAcAAQADAAUAAAAJAAkAAQABAAUAAAAKAAkAAQACAAUAAAALAAkAAQADAAUAAAAIAAkAAQAAAAIAAAAIAAoAAQAAAAMAAAAIAAsAAQAAAAQAAAAJAAoAAQAFAAQAAAAJAAsAAQAFAAQAAAAJAAgAAQAEAAQAAAAKAAgAAQAEAAQAAAALAAgAAQAEAAQAAAAIAAwAAQAEAAUAAAAIAAgAAQAHAAUAAAANAAsAAQAPAAEAAAANAAwAAQAPAAIAAAALAAoAAQAFAAUAAAANAAgAAQAIAAQAAAAFAAoAAQAGAAUAAAA=")
-
-[node name="NPC" parent="." instance=ExtResource("4_7qwt0")]
-position = Vector2(372, 194)
-type = 0
-dialog = "test"
-sprite_sheet = ExtResource("5_h28s4")
-spirte_vframes = 6
-sprite_anim_end = 2
-sprite_anim_speed = 0.1
