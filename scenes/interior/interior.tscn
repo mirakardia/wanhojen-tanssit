@@ -451,3 +451,5 @@ tile_map_data = PackedByteArray("AABUAO//AAAAAAEAAABWAO3/AAAAAAEAAAAFAAQAAQABAAM
 position = Vector2(372, 194)
 type = 2
 scene = Vector2(0.585, 0)
+sprite_anim_end = 2
+sprite_anim_speed = 0.5

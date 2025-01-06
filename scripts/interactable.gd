@@ -3,6 +3,7 @@ extends Node
 
 
 @onready var hitbox : Area2D = get_node("Hitbox")
+@onready var sprite : Sprite2D = get_node("Sprite2D")
 @onready var game_manager : GameManager = get_node("/root/GameManager")
 
 enum INTERACTION_TYPE {DIALOG, CHANGE_STATE, CHANGE_SCENE} 
@@ -18,14 +19,31 @@ var scene : Vector2
 var key : String
 var value : String
 
+var sprite_sheet : Texture
+var spirte_hframes : int
+var spirte_vframes : int
+var sprite_anim_start :int
+var sprite_anim_end :int
+var sprite_anim_speed: float = 1
 func _ready() -> void:
 	hitbox.body_entered.connect(enter_interactable)
 	hitbox.body_exited.connect(exit_interactable)
+	sprite.texture = sprite_sheet
+	sprite.vframes = spirte_vframes
+	sprite.hframes = spirte_hframes
+	anim()
+
 
 func enter_interactable(body : Node2D):
 	if body.get_groups().has("player"):
 		print("test")
 		game_manager.interaction_events.append(event)
+
+func anim() -> void:
+	var tween = sprite.create_tween()
+	sprite.frame = sprite_anim_start
+	tween.tween_property(sprite, "frame", sprite_anim_end, sprite_anim_speed)
+	tween.tween_callback(anim)
 
 func event():
 	match type:
@@ -77,6 +95,35 @@ func _get_property_list():
 			"type": TYPE_VECTOR2,
 			"hint": PROPERTY_USAGE_DEFAULT
 		 	})
-		
-
+		ret.append({
+			"name": &"sprite_sheet",
+			"type": TYPE_OBJECT,
+			"hint": PROPERTY_HINT_RESOURCE_TYPE,
+			"hint_string" : "Texture2D"
+		 	})
+		ret.append({
+			"name": &"spirte_hframes",
+			"type": TYPE_INT,
+			"usage": PROPERTY_USAGE_DEFAULT
+		})
+		ret.append({
+			"name": &"spirte_vframes",
+			"type": TYPE_INT,
+			"usage": PROPERTY_USAGE_DEFAULT
+		})
+		ret.append({
+			"name": &"sprite_anim_start",
+			"type": TYPE_INT,
+			"usage": PROPERTY_USAGE_DEFAULT,
+		})
+		ret.append({
+			"name": &"sprite_anim_end",
+			"type": TYPE_INT,
+			"usage": PROPERTY_USAGE_DEFAULT,
+		})
+		ret.append({
+			"name": &"sprite_anim_speed",
+			"type": TYPE_FLOAT,
+			"usage": PROPERTY_USAGE_DEFAULT,
+		})
 		return ret

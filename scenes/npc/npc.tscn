@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhpjsvi88cwd5"]
+[gd_scene load_steps=6 format=3 uid="uid://bhpjsvi88cwd5"]
 
 [ext_resource type="Script" path="res://scripts/interactable.gd" id="1_bhrdr"]
 [ext_resource type="Texture2D" uid="uid://bxme48bxqj4jq" path="res://assets/sprites/angsty_bird/overworld/angsty_bird.png" id="1_mysn3"]
+[ext_resource type="Texture2D" uid="uid://c8kh5psthmfeh" path="res://assets/sprites/villapaita/overworld/villapaita.png" id="2_cxxlb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8iao"]
 radius = 9.99999
@@ -13,8 +14,15 @@ height = 54.7368
 
 [node name="NPC" type="CharacterBody2D"]
 script = ExtResource("1_bhrdr")
-type = 0
-dialog = ""
+type = 1
+key = "teaet"
+value = ""
+sprite_sheet = ExtResource("2_cxxlb")
+spirte_hframes = 5
+spirte_vframes = 5
+sprite_anim_start = 0
+sprite_anim_end = 3
+sprite_anim_speed = 1.0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 rotation = -1.5708
