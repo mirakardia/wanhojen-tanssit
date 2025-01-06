@@ -3,7 +3,8 @@ extends Node
 
 @export var dialog_root : Node
 @export var speaker_icons: Dictionary
-
+@export var player_name : String = "Kim"
+@export var default_font : Font
 
 @onready var dialog_box : RichTextLabel = dialog_root.get_node("DialogBox")
 @onready var speaker_icon : TextureRect = dialog_root.get_node("SpeakerIcon")
@@ -45,10 +46,11 @@ func load_participant_data() -> void:
 			var emote_image = Image.load_from_file(json.emotes[emote])
 			var emote_texture = ImageTexture.create_from_image(emote_image)
 			json.emotes[emote] = emote_texture
+		if json.has("reaction_origin"):
+			json.reaction_origin = Vector2(json.reaction_origin.x,json.reaction_origin.y)
+		if json.has("font"):
+			json.font = load(json.font)
 		
-		json.reaction_origin = Vector2(json.reaction_origin.x,json.reaction_origin.y)
-
-
 
 		participants[file.trim_suffix(".json")] = json
 
@@ -110,10 +112,9 @@ func find_dialog(dialog_name: String) -> Dictionary:
 			return dialog
 	push_error("Couldn't find dialog with name: " + dialog_name)
 	return {}
-const player_name = "Kim"
+	
 
 func start_dialog (dialog_name: String) -> void:
-	print("test")
 	var dialog = find_dialog(dialog_name)
 	in_dialog = true;
 	current_dialog = dialog
@@ -122,6 +123,7 @@ func start_dialog (dialog_name: String) -> void:
 	if dialog.has("effects"):
 		run_effects(dialog.effects)
 	set_active_speaker(dialog.speaker)
+
 	dialog_box.text = dialog.text.replace("%s", player_name)
 	dialog_box.visible_ratio = 0
 	pass
@@ -143,11 +145,18 @@ func set_active_speaker(speaker : String) -> void:
 
 	speaker_label.text = speaker.replace("%s", player_name)
 	if participants.has(speaker):
-		if participants[speaker].has("name"):
-			speaker_label.text = participants[speaker].name
-			SoundManager.set_gibberish_profile(participants[speaker].name)
+		var participant = participants[speaker]
+		if participant.has("name"):
+			speaker_label.text = participant.name
+			SoundManager.set_gibberish_profile(participant.name)
 		else:
 			SoundManager.set_gibberish_profile()
+
+		if participant.has("font"):
+			dialog_box.add_theme_font_override("normal_font", participant.font)
+		else: 
+			dialog_box.add_theme_font_override("normal_font", default_font)
+
 	if speaker_icons.has(speaker):
 		speaker_icon.texture = speaker_icons[speaker]
 	else: 

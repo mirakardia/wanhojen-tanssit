@@ -2,6 +2,7 @@
 	"offset": 20,
 	"name": "Angsty Bird",
 	"neutral": "neutral",
+	"font": "Valentine Bellia TTF Demo.ttf",
 	"reaction_origin": {
 		"x" : 0,
 		"y": -300
