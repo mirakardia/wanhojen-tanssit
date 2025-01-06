@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmxvf5vjsldl1"
+path="res://.godot/imported/angst master.mp3-4581a7df663b425c54b9e2ab0ae9fc02.mp3str"
+
+[deps]
+
+source_file="res://assets/bgm/angst master.mp3"
+dest_files=["res://.godot/imported/angst master.mp3-4581a7df663b425c54b9e2ab0ae9fc02.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

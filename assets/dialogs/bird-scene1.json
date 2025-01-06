@@ -1,0 +1,357 @@
+{
+  "start": "bird-1-1-1",
+  "dialog": [
+    {
+      "name": "bird-1-1-1",
+      "speaker": "kimble",
+      "effects": [
+        {
+          "type": "join_conversation",
+          "actor": "kimble"
+        },
+        {
+          "type": "join_conversation",
+          "actor": "bird"
+        },
+        {
+          "type": "play_bgm",
+          "track": "bgm_birb"
+        }
+      ],
+      "text": "“Moi, öö, hei? Haloo?”",
+      "next": "bird-1-1-2"
+    },
+    {
+      "name": "bird-1-1-2",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "negative"
+        }
+      ],
+      "text": "*ottaa kuulokkeet korvilta* “mitä sä haluut.. pystyy vaan keskeyttään kun kuuntelen musaa…”",
+      "next": "bird-1-1-3"
+    },
+    {
+      "name": "bird-1-1-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Aa kappas, sori. Halusinkin vaan kysyä mitä kuuntelet.”",
+      "next": "bird-1-1-4"
+    },
+    {
+      "name": "bird-1-1-4",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“et sä ymmärtäis…”",
+      "next": "bird-1-1-5"
+    },
+    {
+      "name": "bird-1-1-5",
+      "speaker": "bird",
+      "effects": [],
+      "text": "“mut jos sä ny välttämättä haluut tietää.. niin Spring In Girlsia…”",
+      "next": "bird-1-1-6"
+    },
+    {
+      "name": "bird-1-1-6",
+      "speaker": "bird",
+      "effects": [],
+      "text": "“perhanan synkkää..”",
+      "responses": [
+        {
+          "text": "Onks se joku emobändi",
+          "next": "bird-1-1a-1"
+        },
+        {
+          "text": "Sä oot niin cool ja brooding",
+          "next": "bird-1-1b-1",
+          "reactions": {
+            "bird": 1
+          }
+        },
+        {
+          "text": "Kerro lisää!",
+          "next": "bird-1-1c-1",
+          "reactions": {
+            "bird": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "bird-1-1a-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Eikös Spring In Girls oo joku emobändi?”",
+      "next": "bird-1-1a-2"
+    },
+    {
+      "name": "bird-1-1a-2",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "negative"
+        }
+      ],
+      "text": "“hei.. se on alternative rockia.. en mä mitään emomusaa kuuntele…..”",
+      "next": "bird-1-1a-3"
+    },
+    {
+      "name": "bird-1-1a-3",
+      "speaker": "bird",
+      "effects": [],
+      "text": "“haista paska!..”",
+      "next": "bird-1-1a-4"
+    },
+    {
+      "name": "bird-1-1a-4",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Hei, sori, en mä ny tarkottanu…”",
+      "next": "bird-1-1a-5"
+    },
+    {
+      "name": "bird-1-1a-5",
+      "speaker": "bird",
+      "effects": [],
+      "text": "“...”",
+      "next": "bird-1-2-1"
+    },
+    {
+      "name": "bird-1-1b-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Siis sä oot niin cool ja brooding, en kestä!”",
+      "next": "bird-1-1b-2"
+    },
+    {
+      "name": "bird-1-1b-2",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“joo mä tiiän” *punastuu kuitenkin*",
+      "next": "bird-1-2-1"
+    },
+    {
+      "name": "bird-1-1c-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Aivan tuntematon bändi mulle :o Kerro lisää!”",
+      "next": "bird-1-1c-2"
+    },
+    {
+      "name": "bird-1-1c-2",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“en ihmettele ettet oo kuullu… tätä ei tiedä muut ku oikeet musadiggarit… idiootit sanoo emomusaks mutta ei se sitä todellakaan oo…”",
+      "next": "bird-1-1c-3"
+    },
+    {
+      "name": "bird-1-1c-3",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "positive"
+        }
+      ],
+      "text": "“ainoo mikä iskee kovempaa on Thy Alchemical Affection…”",
+      "next": "bird-1-1c-4"
+    },
+    {
+      "name": "bird-1-1c-4",
+      "speaker": "bird",
+      "effects": [],
+      "text": "“Tosi coolia. Pitää pistää itekin kuunteluun..”",
+      "next": "bird-1-2-1"
+    },
+    {
+      "name": "bird-1-2-1",
+      "speaker": "bird",
+      "effects": [],
+      "text": "“mitä musaa sä kuuntelet.. varmaan jotain tosi mainstreamiä..”",
+      "responses": [
+        {
+          "text": "Samaa kuin säkin",
+          "next": "bird-1-2a-1"
+        },
+        {
+          "text": "Räppiä lähinnä",
+          "next": "bird-1-2b-1",
+          "reactions": {
+            "bird": 1
+          }
+        },
+        {
+          "text": "Fluorescent Airship (hard rock)",
+          "next": "bird-1-2c-1",
+          "reactions": {
+            "bird": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "bird-1-2a-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Mä itse asiassa kuuntelen samaa kun säkin! Öö, ainakin Anxiety! At The Ballia.”",
+      "next": "bird-1-2a-2"
+    },
+    {
+      "name": "bird-1-2a-2",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“ai oot fani?.. nimeä kaikki niiden levyt…”",
+      "next": "bird-1-2a-3"
+    },
+    {
+      "name": "bird-1-2a-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“... ööööööö… öö…”",
+      "next": "bird-1-2a-4"
+    },
+    {
+      "name": "bird-1-2a-4",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“no niin, sitähän mäkin…”",
+      "next": "bird-1-3-1"
+    },
+    {
+      "name": "bird-1-2b-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Mä kuuntelen yleensä jotain Pinkfacee tai Isoa F:ää tai muuta räppiä”",
+      "next": "bird-1-2b-2"
+    },
+    {
+      "name": "bird-1-2b-2",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“nooooo, kai niitäkin pahana päivänä voi.. mut parempiikin on..”",
+      "next": "bird-1-3-1"
+    },
+    {
+      "name": "bird-1-2c-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Viime aikoina sellasta bändiä kuin Fluorescent Airship. Niiden biisi White Cat saa mut AIVAN tiloihin.”",
+      "next": "bird-1-2c-2"
+    },
+    {
+      "name": "bird-1-2c-2",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "positive"
+        }
+      ],
+      "text": "“no niin, ainakin jotain rokkia ja synkkää… propsit heti.. hyvä ettet sanonu Warmstop, se ois ollu aika mainstreamii jo..”",
+      "next": "bird-1-2c-3"
+    },
+    {
+      "name": "bird-1-2c-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Joo en mä Warmstoppii, toivottavasti eivät tuu ikinä tänne keikalle.”",
+      "next": "bird-1-2c-4"
+    },
+    {
+      "name": "bird-1-2c-4",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“niinpä, parempi kun pysyy siellä rapakon toisella puolella..”",
+      "next": "bird-1-3-1"
+    },
+    {
+      "name": "bird-1-3-1",
+      "speaker": "kimble",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“...”",
+      "next": "bird-1-3-2"
+    },
+    {
+      "name": "bird-1-3-2",
+      "speaker": "bird",
+      "effects": [],
+      "text": "“...”",
+      "next": "bird-1-3-3"
+    },
+    {
+      "name": "bird-1-3-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Mä taidan tästä kyllä mennä seuraavaan paikkaan, nähdään!”",
+      "next": "bird-1-3-4"
+    },
+    {
+      "name": "bird-1-3-4",
+      "speaker": "bird",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "bird",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“joo, moi…”"
+    }
+  ]
+}

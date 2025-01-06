@@ -1,0 +1,404 @@
+{
+  "start": "tahti-2-1-1",
+  "dialog": [
+    {
+      "name": "tahti-2-1-1",
+      "speaker": "kimble",
+      "effects": [
+        {
+          "type": "join_conversation",
+          "actor": "kimble"
+        },
+        {
+          "type": "join_conversation",
+          "actor": "tahti"
+        },
+        {
+          "type": "play_bgm",
+          "track": "bgm_afrikka"
+        }
+      ],
+      "text": "“Onko sun mautossa tilaa vielä yhdelle?”",
+      "next": "tahti-2-1-2"
+    },
+    {
+      "name": "tahti-2-1-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "*Säkenöi viekkaasti* “Tiedätkö, mikä merkitsee ajoneuvon kuuluvan yläluokkaiselle omistajalle (kuten minä, jota loistavampaa – tai kalliimpaa – tuskin on? Hohoho...)”",
+      "next": "tahti-2-1-3"
+    },
+    {
+      "name": "tahti-2-1-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Tota, öö, se kiiltää?”",
+      "next": "tahti-2-1-4"
+    },
+    {
+      "name": "tahti-2-1-4",
+      "speaker": "tahti",
+      "effects": [],
+      "text": "“Jestas! Ei, vaan: missä on monta paikkaa? Bussissa! Junassa! Kaupallisesssa halpalentoyhtiön lentokoneessa! Tässä mautossa on kaksi paikkaa. Todellinen ajoneuvojen helmi.”",
+      "next": "tahti-2-1-5"
+    },
+    {
+      "name": "tahti-2-1-5",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“…”",
+      "next": "tahti-2-1-6"
+    },
+    {
+      "name": "tahti-2-1-6",
+      "speaker": "tahti",
+      "effects": [],
+      "text": "“Eli on tilaa.“",
+      "next": "tahti-2-1-7"
+    },
+    {
+      "name": "tahti-2-1-8",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Kiitos.\n\nTota, mikset sä oo ruokalassa syömässä?”",
+      "next": "tahti-2-1-9"
+    },
+    {
+      "name": "tahti-2-1-9",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "negative"
+        }
+      ],
+      "text": "“Typerä kysymys. Toisen asteen koulutuksen ruoka on ilmaista. Mikään ilmainen ei saa koskettaa kallista ruumistani.”",
+      "next": "tahti-2-1-10"
+    },
+    {
+      "name": "tahti-2-1-10",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Okei... Tota, mistä sä sitten tykkäät?”",
+      "next": "tahti-2-1-11"
+    },
+    {
+      "name": "tahti-2-1-7",
+      "speaker": "tahti",
+      "effects": [],
+      "text": "“Te rahvaat tuskin osaatte nimetä sellaisia ruokia.”",
+      "responses": [
+        {
+          "text": "Kaviaari",
+          "next": "tahti-2-1a-1"
+        },
+        {
+          "text": "Foie gras",
+          "next": "tahti-2-1b-1",
+          "reactions": {
+            "tahti": 1
+          }
+        },
+        {
+          "text": "Äidin tekemä ruoka",
+          "next": "tahti-2-1c-1",
+          "reactions": {
+            "tahti": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "tahti-2-1a-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Kaviaari?”",
+      "next": "tahti-2-1a-2"
+    },
+    {
+      "name": "tahti-2-1a-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "negative"
+        }
+      ],
+      "text": "“Halpaa kuin roska.”",
+      "next": "tahti-2-2-1"
+    },
+    {
+      "name": "tahti-2-1b-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Foie gras... de Canard Poêlé avec Truffes Noires?”",
+      "next": "tahti-2-1b-2"
+    },
+    {
+      "name": "tahti-2-1b-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“Johan – oletko syönyt sitä ennen? Kiehtovaa, et selkeästi ole kuin muut täällä…”",
+      "next": "tahti-2-2-1"
+    },
+    {
+      "name": "tahti-2-1c-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“...Äidin tekemä ruoka?”",
+      "next": "tahti-2-1c-2"
+    },
+    {
+      "name": "tahti-2-1c-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "positive"
+        }
+      ],
+      "text": "*säkenöi pienen kyyneleen* “En voisi ikinä nimittää sitä halvaksi…”",
+      "next": "tahti-2-2-1"
+    },
+    {
+      "name": "tahti-2-2-1",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "*Säkenöi tarkkailevasti* “Hmm... Nyt kun mietin, olen tainnutkin nähdä sinut käytävillä kerran tai pari. Ehkä. Mahdollisesti. (Sinä onnekas olento!)”",
+      "next": "tahti-2-2-2"
+    },
+    {
+      "name": "tahti-2-2-2",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Ollaan oltu kaikilla samoilla kursseilla.”",
+      "next": "tahti-2-2-3"
+    },
+    {
+      "name": "tahti-2-2-3",
+      "speaker": "tahti",
+      "effects": [],
+      "text": "“Mahdotonta! Mihin ihmeeseen tähtäät, jos olet valinnut täysin samat kurssit kuin minä?”",
+      "responses": [
+        {
+          "text": "Lakimies",
+          "next": "tahti-2-2a-1"
+        },
+        {
+          "text": "Kela Gold",
+          "next": "tahti-2-2b-1",
+          "reactions": {
+            "tahti": 1
+          }
+        },
+        {
+          "text": "Se on mysteeri ;)",
+          "next": "tahti-2-2c-1",
+          "reactions": {
+            "tahti": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "tahti-2-2a-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Aion töihin lakimieheksi.”",
+      "next": "tahti-2-2a-2"
+    },
+    {
+      "name": "tahti-2-2a-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“Töihin? Hohoho... kuinka köyhää.”",
+      "next": "tahti-2-3-1"
+    },
+    {
+      "name": "tahti-2-2b-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“En varmana mene töihin. Kela Gold it is.”",
+      "next": "tahti-2-2b-2"
+    },
+    {
+      "name": "tahti-2-2b-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“En tosiaan tiedä mikä on Kela, mutta kuulostaa järkevältä. Töiden teko on rahvaalle. Meissä on yllättävän paljon samaa…”",
+      "next": "tahti-2-3-1"
+    },
+    {
+      "name": "tahti-2-2c-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“...Öh, se on mysteeri.” *iskee silmää*",
+      "next": "tahti-2-2c-2"
+    },
+    {
+      "name": "tahti-2-2c-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "negative"
+        }
+      ],
+      "text": "*säkenöi punaista hohtoa* “Mi-mitä? Väitätkö, että otit samat kurssit vain siksi, että voisit nauttia loistokkaasta läsnäolostani? H-hä-häpeä!”",
+      "next": "tahti-2-3-1"
+    },
+    {
+      "name": "tahti-2-3-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Joo, öö okei... Mul ois kyl yks kysymys viel. Tuutko sä tällä mautolla aina kouluun?”",
+      "next": "tahti-2-3-2"
+    },
+    {
+      "name": "tahti-2-3-2",
+      "speaker": "tahti",
+      "effects": [],
+      "text": "“Hah! En tietenkään. Suurenmoinen hevosvaununi kuljettaa minua paikasta toiseen - paitsi...” *säkenöi surullista hehkua* “Uskollisin hevoseni, uljaalta nimeltään Indeksirahasto, kadotti tänä aamuna hevosenkenkänsä matkalla Kairoon. Ja tänä aamuna yksityisetsiväni numero 21 selvitti, että joku ihme porukka matkaajia kerää hevosenkenkiä aikeinaan löytää (kidnapata!) minut!”",
+      "responses": [
+        {
+          "text": "Onneksi on vielä mauto",
+          "next": "tahti-2-3a-1"
+        },
+        {
+          "text": "Mun porukat voi heittää sut",
+          "next": "tahti-2-3b-1",
+          "reactions": {
+            "tahti": 1
+          }
+        },
+        {
+          "text": "Ojenna hevosenkenkä",
+          "next": "tahti-2-3c-1",
+          "requirements": [
+            {
+              "key": "hevosenkenka",
+              "value": "true",
+              "type": "equal"
+            }
+          ],
+          "reactions": {
+            "tahti": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "tahti-2-3a-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Onneks sulla on viel tää mauto.",
+      "next": "tahti-2-3a-2"
+    },
+    {
+      "name": "tahti-2-3a-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "negative"
+        }
+      ],
+      "text": "“Hah! Tämä mauto on tarkoitettu vain siihen, että se pysyy täällä parkissa. Miksi muuten kukaan ostaisi mauton?”",
+      "next": "tahti-2-4-1"
+    },
+    {
+      "name": "tahti-2-3b-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Mun porukat voi heittää sut kotii samal ku mut.”",
+      "next": "tahti-2-3b-2"
+    },
+    {
+      "name": "tahti-2-3b-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“...Hmm. Totta. Vain ääliö ajaa autoaan itse - kuski, se on todellista luxusta. Suostun.”\n\n",
+      "next": "tahti-2-4-1"
+    },
+    {
+      "name": "tahti-2-3c-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "*ojentaa hevosenkengän*",
+      "next": "tahti-2-3c-2"
+    },
+    {
+      "name": "tahti-2-3c-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "positive"
+        }
+      ],
+      "text": "“Smaragdit sentään- ! Oletko etsinyt koko koulun läpi löytääksesi hevosenkengän - vain ja ainoastaan minua varten...?” *säkenöi punaista hohtoa*",
+      "next": "tahti-2-4-1"
+    },
+    {
+      "name": "tahti-2-4-1",
+      "speaker": "narrator",
+      "effects": [],
+      "text": "*Kello soi*",
+      "next": "tahti-2-4-2"
+    },
+    {
+      "name": "tahti-2-4-2",
+      "speaker": "tahti",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“Tch. Aika mennä. Et ollut aivan turhinta seuraa... hmph.”"
+    }
+  ]
+}

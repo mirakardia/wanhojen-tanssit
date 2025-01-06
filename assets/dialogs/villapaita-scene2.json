@@ -1,0 +1,284 @@
+{
+  "start": "villapaita-2-1-1",
+  "dialog": [
+    {
+      "name": "villapaita-2-1-1",
+      "speaker": "kimble",
+      "effects": [
+        {
+          "type": "join_conversation",
+          "actor": "kimble"
+        },
+        {
+          "type": "join_conversation",
+          "actor": "villapaita"
+        },
+        {
+          "type": "play_bgm",
+          "track": "bgm_sakari"
+        }
+      ],
+      "text": "“Sopiiko seuraanne liittyä, arvon herra?”",
+      "next": "villapaita-2-1-2"
+    },
+    {
+      "name": "villapaita-2-1-2",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“Ioha toki / Tojwon mucka olet Walmin unochtwmatoman Lownastelun”",
+      "next": "villapaita-2-1-3"
+    },
+    {
+      "name": "villapaita-2-1-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Kiitti, kiitti.”",
+      "next": "villapaita-2-1-4"
+    },
+    {
+      "name": "villapaita-2-1-4",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "negative"
+        }
+      ],
+      "text": "“Cwle / nejn Meidhen kezke / hwomazin Rotzin Oppe-Tunnil / ette osa Opizkelioizt ombi Lajzcoia ia Samatomia / pereti Asenteldan Ongelmajsi / Siwistust halwexutan Kerscal tawal /”",
+      "responses": [
+        {
+          "text": "Eipä ruotsi ketään kiinnostakaan",
+          "next": "villapaita-2-1a-1"
+        },
+        {
+          "text": "Luulisi sivistyksen kiinnostavan",
+          "next": "villapaita-2-1b-1",
+          "reactions": {
+            "villapaita": 1
+          }
+        },
+        {
+          "text": "Herraisä, mokomat lurjakkeet!",
+          "next": "villapaita-2-1c-1",
+          "reactions": {
+            "villapaita": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "villapaita-2-1a-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“No, eipä ruotsi ole juuri kenenkään lempparioppiaine.”",
+      "next": "villapaita-2-1a-2"
+    },
+    {
+      "name": "villapaita-2-1a-2",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "negative"
+        }
+      ],
+      "text": "“Wajs sine! / Siwistuxen Kelen tuliz kinoztaa Cutagi”",
+      "next": "villapaita-2-2-1"
+    },
+    {
+      "name": "villapaita-2-1b-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Pannahinen! Kyllähän aidon sivistyksen ajattelisi vetoavan nuorisoon!”",
+      "next": "villapaita-2-1b-2"
+    },
+    {
+      "name": "villapaita-2-1b-2",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“Pwhut teytte asiaa / Usteweizen”",
+      "next": "villapaita-2-2-1"
+    },
+    {
+      "name": "villapaita-2-1c-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Herraisä! Mokomien lurjakkeiden sietäskin oppia toista Suomenmaan kieltä. Öö, että arvostaisivat kunnollisuutta ja, öö, sivistystä paremmin! Niin just.”",
+      "next": "villapaita-2-1c-2"
+    },
+    {
+      "name": "villapaita-2-1c-2",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "positive"
+        }
+      ],
+      "text": "“Sano sine mwta / Ei Nyckö-Nworizos toiwo lie / jos eiwet ”",
+      "next": "villapaita-2-2-1"
+    },
+    {
+      "name": "villapaita-2-2-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Mua jäi muuten kiinnostaan, keiden kanssa sä hengaat täällä koulussa. Ketkä on sun ystäviä?”",
+      "next": "villapaita-2-2-2"
+    },
+    {
+      "name": "villapaita-2-2-2",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“Kamrateiaha minul wojz olla runsazti / ios Ummerteziwet Terckeiden Asiajn pele”",
+      "next": "villapaita-2-2-3"
+    },
+    {
+      "name": "villapaita-2-2-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Tietysti. Keitä ne sitten on?”",
+      "next": "villapaita-2-2-4"
+    },
+    {
+      "name": "villapaita-2-2-4",
+      "speaker": "villapaita",
+      "effects": [],
+      "text": "“Hmm… Eibe nut tule miele sellajzi / iotca Asjan-Muckajsel Tawal noudhatajzi Arwockaita Arwoia / Walajsicitco wächä / mite ajatelet tacka?”",
+      "responses": [
+        {
+          "text": "Toisten solvaaminen on huono idea",
+          "next": "villapaita-2-2a-1"
+        },
+        {
+          "text": "Ehkä ystäviä olisi, jos olisit ystävällisempi",
+          "next": "villapaita-2-2b-1",
+          "reactions": {
+            "villapaita": 1
+          }
+        },
+        {
+          "text": "Perun puheeni, muut on oikeesti idiootteja",
+          "next": "villapaita-2-2c-1",
+          "reactions": {
+            "villapaita": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "villapaita-2-2a-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Sä tunnut suhtautuvan ihmisiin jotenkin kauheen negatiivisesti ja tuomitsevasti. Tiiätkö, ihmiset ei yleensä nauti solvauksista ja paasaamisesta.”",
+      "next": "villapaita-2-2a-2"
+    },
+    {
+      "name": "villapaita-2-2a-2",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "negative"
+        }
+      ],
+      "text": "“Potazka / On inchimizte oma Syndi ja Hebeä / ios eiwet tunizta Walojza Tiete”",
+      "next": "villapaita-2-2a-3"
+    },
+    {
+      "name": "villapaita-2-2a-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Aatteletko siis tosiaan, että saat solvaamalla seuraajia?”",
+      "next": "villapaita-2-2a-4"
+    },
+    {
+      "name": "villapaita-2-2a-4",
+      "speaker": "villapaita",
+      "effects": [],
+      "text": "“Tarckotuxet puhitewet kejnot!”",
+      "next": "villapaita-2-3-1"
+    },
+    {
+      "name": "villapaita-2-2b-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Ihmiset vois varmasti olla avoimia sun ajatuksille, jos käyttäsit hunajaa etikan sijaan.”",
+      "next": "villapaita-2-2b-2"
+    },
+    {
+      "name": "villapaita-2-2b-2",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "neutral"
+        }
+      ],
+      "text": "“Molemat cwluwat Kögin pwolel”",
+      "next": "villapaita-2-3-1"
+    },
+    {
+      "name": "villapaita-2-2b-3",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Tarkotan siis, että jos oot ystävällisempi toisille, ne saattaa kuunnella sun viestiä auliimmin.”",
+      "next": "villapaita-2-2b-4"
+    },
+    {
+      "name": "villapaita-2-2b-4",
+      "speaker": "villapaita",
+      "effects": [],
+      "text": "“Sanojzas vojbi pijle Totwdhen Semen / Otan tete Asjai-Haarat harckintan / Metodeis ombi ajna paranetawa”",
+      "next": "villapaita-2-3-1"
+    },
+    {
+      "name": "villapaita-2-2c-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“Itse asiassa muutin mieleni. Sä oot aivan oikeessa. Toiset on täystoopeja eikä osaa arvostaa sun mallikkuutta. ”",
+      "next": "villapaita-2-2c-2"
+    },
+    {
+      "name": "villapaita-2-2c-2",
+      "speaker": "villapaita",
+      "effects": [
+        {
+          "type": "emote",
+          "actor": "tahti",
+          "emote": "positive"
+        }
+      ],
+      "text": "“Ajwan / Net Walon / Majlma oliz moni weroi parembi Paicka / ios cajci tuniztaiziwat sen / mikä Arwojsam on Hywe / ia tekiziwet töjte Puchtaman Maan eten / Narcismus ia Itzeckus owat walanet Majlman io caua sitte / ia Minun ja Sjnun lajstem ombi tartutawa Asejzi moist wasta”",
+      "next": "villapaita-2-3-1"
+    },
+    {
+      "name": "villapaita-2-3-1",
+      "speaker": "kimble",
+      "effects": [],
+      "text": "“*örp* Joo, sanos muuta. Kiitos lounasseurasta, mä lähen tästä seuraavaan paikkaan. Heippa!”"
+    }
+  ]
+}

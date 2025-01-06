@@ -1,0 +1,652 @@
+{
+  "New item": {
+    "start": "matopallo-1-1-1",
+    "dialog": [
+      {
+        "name": "matopallo-1-1-1",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "join_conversation",
+            "actor": "kimble"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          }
+        ],
+        "text": "“Moi!”",
+        "next": "matopallo-1-1-2"
+      },
+      {
+        "name": "matopallo-1-1-2",
+        "speaker": "mato",
+        "effects": [
+          {
+            "type": "leave_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "pallo"
+          },
+          {
+            "type": "emote",
+            "actor": "mato",
+            "emote": "positive"
+          }
+        ],
+        "text": "“OmG! Sanottiin samaan aikaan! >//<”",
+        "next": "matopallo-1-1-3"
+      },
+      {
+        "name": "matopallo-1-1-3",
+        "speaker": "pallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "pallo",
+            "emote": "positive"
+          }
+        ],
+        "text": "*nyökkää ja tekee yhden punnerruksen juhlistaakseen asiaa*",
+        "next": "matopallo-1-1-4"
+      },
+      {
+        "name": "matopallo-1-1-4",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Joo, moi vaan. Ootteko jo palauttanut sen meidän ryhmätyön?”",
+        "next": "matopallo-1-1-5"
+      },
+      {
+        "name": "matopallo-1-1-5",
+        "speaker": "mato",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "mato",
+            "emote": "positive"
+          }
+        ],
+        "text": "“LoLz, Pallo palautti sen eilen tismalleen klo 23:59 - kuulemma, jotta opettajat vittuuntuu. uWu. Pallo on niin villi.”",
+        "next": "matopallo-1-1-6"
+      },
+      {
+        "name": "matopallo-1-1-6",
+        "speaker": "pallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "pallo",
+            "emote": "neutral"
+          }
+        ],
+        "text": "*punnertaa ollakseen samaa mieltä*",
+        "next": "matopallo-1-1-7"
+      },
+      {
+        "name": "matopallo-1-1-7",
+        "speaker": "mato",
+        "effects": [],
+        "text": "“Saadaan varmasti silti kymppi ja vaan koska mä olin tekemässä sitä. Mul on kaikki aina kymppi!! ( ͡° ͜ʖ ͡°)”",
+        "next": "matopallo-1-1-8"
+      },
+      {
+        "name": "matopallo-1-1-8",
+        "speaker": "pallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "pallo",
+            "emote": "negative"
+          }
+        ],
+        "text": "*kääntyy loukkaantuneesti kohti matoa ja tekee ärtyneen leuanvedon*",
+        "next": "matopallo-1-1-9"
+      },
+      {
+        "name": "matopallo-1-1-9",
+        "speaker": "mato",
+        "effects": [],
+        "text": "“Hei!11! Me kaikki tiedetään, kuka sen ryhmätyön oikeasti pelasti!!11! Vai mitä?”  ଘ(੭ˊᵕˋ)੭* ੈ✩‧₊˚",
+        "responses": [
+          {
+            "text": "Molemmat tekivät yhtä paljon",
+            "next": "matopallo-1-1a-1"
+          },
+          {
+            "text": "Kunhan kurssi menee läpi",
+            "next": "matopallo-1-1b-1",
+            "reactions": {
+              "matopallo": 1
+            }
+          },
+          {
+            "text": "Halusitte auttaa toisianne",
+            "next": "matopallo-1-1c-1",
+            "reactions": {
+              "matopallo": 2
+            }
+          }
+        ]
+      },
+      {
+        "name": "matopallo-1-1a-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“No öh, molemmat teki yhtä paljon...?”",
+        "next": "matopallo-1-1a-2"
+      },
+      {
+        "name": "matopallo-1-1a-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "negative"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“Hei! Epäreilua, mä tein enemmän!”",
+        "next": "matopallo-1-2-1"
+      },
+      {
+        "name": "matopallo-1-1b-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Ei sillä ole väliä, kunhan tuli tehtyä - tai muuten ei oltaisi kukaan päästy kurssista läpi.“",
+        "next": "matopallo-1-1b-2"
+      },
+      {
+        "name": "matopallo-1-1b-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "neutral"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“Hmm, no joo. Kai se on sitten niin.”",
+        "next": "matopallo-1-2-1"
+      },
+      {
+        "name": "matopallo-1-1c-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Varmasti halusitte molemmat auttaa toista niin paljon, että kilpailitte siitä, kuka saa tehtyä eniten töitä...?” ",
+        "next": "matopallo-1-1c-2"
+      },
+      {
+        "name": "matopallo-1-1c-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "positive"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“Raksuliini!!!”",
+        "next": "matopallo-1-2-1"
+      },
+      {
+        "name": "matopallo-1-2-1",
+        "speaker": "mato",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "mato",
+            "emote": "positive"
+          },
+          {
+            "type": "emote",
+            "actor": "pallo",
+            "emote": "neutral"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“Hei OmGGGGG! Sanottiin samaan aikaan!!1121!!  (°(°ω(°ω°(☆ω☆)°ω°)ω°)°)”\t",
+        "next": "matopallo-1-2-2"
+      },
+      {
+        "name": "matopallo-1-2-2",
+        "speaker": "pallo",
+        "effects": [],
+        "text": "*punnertaa peittääkseen punastumisensa*",
+        "next": "matopallo-1-2-3"
+      },
+      {
+        "name": "matopallo-1-2-3",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Okeiiii. Mut joka tapauksessa, ootteko vielä saaneet paria wanhoihin? Eiku - tanssitte varmaa yhdessä?”",
+        "next": "matopallo-1-2-4"
+      },
+      {
+        "name": "matopallo-1-2-4",
+        "speaker": "mato",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "mato",
+            "emote": "neutral"
+          }
+        ],
+        "text": "“LMAOOOO, se on lukion sääntö #1, ettei kumppanin kanssa tanssita wanhoja. Mitä jos vaikka erotaan, ja sitten kaikki wanhojen kuvat on ihan trash?",
+        "next": "matopallo-1-2-5"
+      },
+      {
+        "name": "matopallo-1-2-5",
+        "speaker": "pallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "pallo",
+            "emote": "negative"
+          }
+        ],
+        "text": "*tekee 10 x-hyppyä osoittaakseen syvää vihastumista pelkästä ajatuksesta*",
+        "next": "matopallo-1-2-6"
+      },
+      {
+        "name": "matopallo-1-2-6",
+        "speaker": "mato",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "mato",
+            "emote": "negative"
+          }
+        ],
+        "text": "“Hei- en mä tarkoittanut sitä noin! ;-; Mut hyvähän se on varalta ajatella niin, eix?”",
+        "responses": [
+          {
+            "text": "Tanssikaa jompikumpi mun kanssa.",
+            "next": "matopallo-1-2a-1"
+          },
+          {
+            "text": "Kumpikaan ei tanssi.",
+            "next": "matopallo-1-2b-1",
+            "reactions": {
+              "matopallo": 1
+            }
+          },
+          {
+            "text": "Mato pallon asuksi.",
+            "next": "matopallo-1-2c-1",
+            "reactions": {
+              "matopallo": 2
+            }
+          }
+        ]
+      },
+      {
+        "name": "matopallo-1-2a-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Tanssikaa jompikumpi mun kanssa.”",
+        "next": "matopallo-1-2a-2"
+      },
+      {
+        "name": "matopallo-1-2a-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "negative"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“MITÄ! Emme koskaan voisi olla erossa toisistamme!”",
+        "next": "matopallo-1-3-1"
+      },
+      {
+        "name": "matopallo-1-2b-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Jättäkää molemmat tanssimatta ja pitäkää omat tanssit.”",
+        "next": "matopallo-1-2b-2"
+      },
+      {
+        "name": "matopallo-1-2b-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "neutral"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“Niin… ehkä se on pakko.”",
+        "next": "matopallo-1-3-1"
+      },
+      {
+        "name": "matopallo-1-2c-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Mitä jos mato menee pallon asuksi?”",
+        "next": "matopallo-1-2c-2"
+      },
+      {
+        "name": "matopallo-1-2c-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "positive"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“Mitä? Kuinka romanttista!”",
+        "next": "matopallo-1-3-1"
+      },
+      {
+        "name": "matopallo-1-3-1",
+        "speaker": "mato",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "mato",
+            "emote": "positive"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“ööömgggg! Sanottiin samaan aikaan, my bae 4ever ＼(≧▽≦)／”",
+        "next": "matopallo-1-3-2"
+      },
+      {
+        "name": "matopallo-1-3-2",
+        "speaker": "pallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "pallo",
+            "emote": "positive"
+          }
+        ],
+        "text": "*tekee yhden käden punnerruksen peittääkseen punastumisensa*",
+        "next": "matopallo-1-3-3"
+      },
+      {
+        "name": "matopallo-1-3-3",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Tota joo, perus...? Kauanko te nyt olittekaan ollu yhdessä?”  ",
+        "next": "matopallo-1-3-4"
+      },
+      {
+        "name": "matopallo-1-3-4",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "pallo",
+            "emote": "neutral"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“Arvaa!”",
+        "responses": [
+          {
+            "text": "Pari kuukautta, koska alkuhuuma.",
+            "next": "matopallo-1-3a-1"
+          },
+          {
+            "text": "Kaksi ja puoli vuotta.",
+            "next": "matopallo-1-3b-1",
+            "reactions": {
+              "matopallo": 1
+            }
+          },
+          {
+            "text": "Miljoonia sydämeniskuja.",
+            "next": "matopallo-1-3c-1",
+            "reactions": {
+              "matopallo": 2
+            }
+          }
+        ]
+      },
+      {
+        "name": "matopallo-1-3a-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Veikkaan pari kuukautta, koska alkuhuuma näyttää olevan vielä menossa.”",
+        "next": "matopallo-1-3a-2"
+      },
+      {
+        "name": "matopallo-1-3a-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "negative"
+          }
+        ],
+        "text": "“Ohi meni... Ollaan oltu jo 2,5 vuotta yhdessä.”",
+        "next": "matopallo-1-4-1"
+      },
+      {
+        "name": "matopallo-1-3b-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Kaks ja puoli vuotta?” ",
+        "next": "matopallo-1-3b-2"
+      },
+      {
+        "name": "matopallo-1-3b-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "neutral"
+          }
+        ],
+        "text": "“Joo, suurin piirtein! Mistä tiesit?”",
+        "next": "matopallo-1-4-1"
+      },
+      {
+        "name": "matopallo-1-3c-1",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“227,760,000 sydämeniskua?”",
+        "next": "matopallo-1-3c-2"
+      },
+      {
+        "name": "matopallo-1-3c-2",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "positive"
+          }
+        ],
+        "text": "*punastuvat* “En ole koskaan ajatellut sitä noin…”",
+        "next": "matopallo-1-4-1"
+      },
+      {
+        "name": "matopallo-1-4-1",
+        "speaker": "mato",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "mato",
+            "emote": "positive"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“OMGGGGGGGGGGGGGGGGGGGG! sanottiinsamaanaikaan (｡・//ε//・｡)”",
+        "next": "matopallo-1-3-2"
+      },
+      {
+        "name": "matopallo-1-3-2",
+        "speaker": "pallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "pallo",
+            "emote": "positive"
+          }
+        ],
+        "text": "*tekee punnerruksen ilman käsiä peittääkseen punastumisensa*",
+        "next": "matopallo-1-3-3"
+      },
+      {
+        "name": "matopallo-1-3-3",
+        "speaker": "kimble",
+        "effects": [],
+        "text": "“Okeiii.... Mun pitää nyt mennä, mut nähään sit ehkä ruokalassa.”",
+        "next": "matopallo-1-3-4"
+      },
+      {
+        "name": "matopallo-1-3-4",
+        "speaker": "matopallo",
+        "effects": [
+          {
+            "type": "emote",
+            "actor": "matopallo",
+            "emote": "positive"
+          },
+          {
+            "type": "join_conversation",
+            "actor": "matopallo"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "mato"
+          },
+          {
+            "type": "leave_conversation",
+            "actor": "pallo"
+          }
+        ],
+        "text": "“Okei! Nähdään!!!! *suutelevat intohimoisesti*”"
+      }
+    ]
+  }
+}

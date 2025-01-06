@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bofh5e0n35k27"
+path="res://.godot/imported/WIENERVALSSI default master.mp3-da80c9ec4bb6c72a0b4fe99f5b08c57c.mp3str"
+
+[deps]
+
+source_file="res://assets/bgm/WIENERVALSSI default master.mp3"
+dest_files=["res://.godot/imported/WIENERVALSSI default master.mp3-da80c9ec4bb6c72a0b4fe99f5b08c57c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
