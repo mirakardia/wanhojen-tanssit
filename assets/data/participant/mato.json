@@ -7,8 +7,8 @@
 		"y": -400
 	},
 	"emotes": {
-		"positive": "assets/sprites/villapaita/dialog/sakarin_villapaita_positive.png",
-		"neutral": "assets/sprites/villapaita/dialog/sakarin_villapaita_neutral.png",
-		"negative": "assets/sprites/villapaita/dialog/sakarin_villapaita_negative.png"
+		"positive": "assets/sprites/mato/dialog/mato_positive.png",
+		"neutral": "assets/sprites/mato/dialog/mato_neutral.png",
+		"negative": "assets/sprites/mato/dialog/mato_negative.png"
 	}
 }

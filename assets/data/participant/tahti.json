@@ -7,8 +7,8 @@
 		"y": -300
 	},
 	"emotes": {
-		"positive": "assets/sprites/angsty_bird/dialog/angsty_bird_positive.png",
-		"neutral": "assets/sprites/angsty_bird/dialog/angsty_bird_neutral.png",
-		"negative": "assets/sprites/angsty_bird/dialog/angsty_bird_negative.png"
+		"positive": "assets/sprites/afrikan_tahti/dialog/afrikan_tahti_positive.png",
+		"neutral": "assets/sprites/afrikan_tahti/dialog/afrikan_tahti_neutral.png",
+		"negative": "assets/sprites/afrikan_tahti/dialog/afrikan_tahti_negative.png"
 	}
 }
