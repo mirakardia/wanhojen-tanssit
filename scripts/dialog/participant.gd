@@ -59,7 +59,11 @@ func show_relation_update(value) -> void:
 		var reaction_instant = TextureRect.new()
 		reaction_instant.texture = reaction_texture
 		reaction_instant.z_index = 1
-		
+
+		reaction_instant.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		reaction_instant.size = Vector2.ONE * 10
+		reaction_instant.pivot_offset.x = 5 
+
 		var random_angle = generate_radom_angle(angles,0)
 		angles.append(deg_to_rad(random_angle))
 		
@@ -72,7 +76,7 @@ func show_relation_update(value) -> void:
 
 		tween.tween_property(reaction_instant, "position", new_pos, speed)
 		tween.parallel().tween_property(reaction_instant, "rotation", deg_to_rad((random_angle+90)/2), speed)
-		tween.parallel().tween_property(reaction_instant, "size", Vector2.ONE*100, speed)
+		tween.parallel().tween_property(reaction_instant, "scale", Vector2.ONE*10, speed)
 		tween.tween_callback(reaction_instant.free)
 
 func join_conversation() -> void:

@@ -18,8 +18,6 @@ func get_game_state(key):
 
 signal open_dialog_scene(name: String)
 
-func open_scene(name: String):
-	emit_signal("open_scene", name)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
