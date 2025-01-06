@@ -25,11 +25,10 @@ var menu_state : bool
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.is_action_pressed("ui_cancel"):
-			print("test")
 			menu.visible = not menu.visible
 			menu_state = menu.visible
-		if event.is_action_pressed("ui_text_newline"):
-			emit_signal("open_dialog_scene", "test")
+#		if event.is_action_pressed("ui_text_newline"):
+#			emit_signal("open_dialog_scene", "test")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
