@@ -53,6 +53,9 @@ var gibberish_profile : String = "default"
 		"speech" : bus_speech
 		}
 
+func _ready() -> void:
+	play_bgm("bgm_overworld")
+
 func test_sfx() -> void:
 	sfx_rollover.play()
 

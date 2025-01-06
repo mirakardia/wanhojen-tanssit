@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dorta1wgomica"]
+[gd_scene load_steps=52 format=3 uid="uid://dorta1wgomica"]
 
 [ext_resource type="Script" path="res://scripts/sound_manager.gd" id="1_6wc0h"]
 [ext_resource type="AudioStream" uid="uid://ca7abe8l84hyx" path="res://assets/puheääniä/mit1.wav" id="3_vdfxy"]
@@ -7,9 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://cfuf36yby8375" path="res://assets/kenney_ui-audio/switch24.ogg" id="6_5fmj3"]
 [ext_resource type="AudioStream" uid="uid://c3hcetetcybci" path="res://assets/puheääniä/mit4.wav" id="6_sar0k"]
 [ext_resource type="AudioStream" uid="uid://dyubak5wfxvki" path="res://assets/puheääniä/mit5.wav" id="7_5qgjc"]
-[ext_resource type="AudioStream" uid="uid://cll5vccwfq2vo" path="res://assets/bgm/Sakarin villapaita.mp3" id="7_uttcu"]
+[ext_resource type="AudioStream" uid="uid://cvfx2yu6k8xdl" path="res://assets/bgm/mölkky master.mp3" id="7_uttcu"]
 [ext_resource type="AudioStream" uid="uid://e7oupaqf45pg" path="res://assets/puheääniä/mit6.wav" id="8_6sse1"]
-[ext_resource type="AudioStream" uid="uid://b48ndi8fvmatj" path="res://assets/bgm/Molkky.wav" id="8_fb67g"]
 [ext_resource type="AudioStream" uid="uid://wdkoxahpn2cg" path="res://assets/kenney_interface-audio/glitch_001.ogg" id="9_5fas6"]
 [ext_resource type="AudioStream" uid="uid://d3ttemb62vhn4" path="res://assets/audio_pools/sakarin_puheet.tres" id="9_85kwh"]
 [ext_resource type="AudioStream" uid="uid://c71sl476jnkqh" path="res://assets/kenney_interface-audio/glitch_002.ogg" id="10_ks0f5"]
@@ -41,6 +40,11 @@
 [ext_resource type="AudioStream" uid="uid://dgvj4k0eov71t" path="res://assets/kenney_ui-audio/rollover2.ogg" id="37_oljhd"]
 [ext_resource type="AudioStream" uid="uid://bq253sl2hi5yk" path="res://assets/kenney_ui-audio/rollover3.ogg" id="38_gjrds"]
 [ext_resource type="AudioStream" uid="uid://d2lr4eerp53ow" path="res://assets/kenney_ui-audio/rollover4.ogg" id="39_robgs"]
+[ext_resource type="AudioStream" uid="uid://d4nokexwfd6f6" path="res://assets/bgm/villapaita master.mp3" id="41_wdif6"]
+[ext_resource type="AudioStream" uid="uid://gja3587lunyd" path="res://assets/bgm/tähti master.mp3" id="42_pjewa"]
+[ext_resource type="AudioStream" uid="uid://bmxvf5vjsldl1" path="res://assets/bgm/angst master.mp3" id="43_lse7g"]
+[ext_resource type="AudioStream" uid="uid://bjvm3xgsqrygm" path="res://assets/bgm/matopallo master.mp3" id="44_fsbcj"]
+[ext_resource type="AudioStream" uid="uid://bofh5e0n35k27" path="res://assets/bgm/WIENERVALSSI default master.mp3" id="45_4cv44"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dkdwv"]
 random_pitch = 1.1
@@ -167,23 +171,23 @@ stream = SubResource("AudioStreamRandomizer_hkuhf")
 bus = &"Sfx"
 
 [node name="BgmMolkky" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_fb67g")
+stream = ExtResource("7_uttcu")
 bus = &"Bgm"
 
 [node name="BgmSakari" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_uttcu")
+stream = ExtResource("41_wdif6")
 bus = &"Bgm"
 
 [node name="BgmAfrikka" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_uttcu")
+stream = ExtResource("42_pjewa")
 bus = &"Bgm"
 
 [node name="BgmBirb" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_uttcu")
+stream = ExtResource("43_lse7g")
 bus = &"Bgm"
 
 [node name="BgmPallomato" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_uttcu")
+stream = ExtResource("44_fsbcj")
 bus = &"Bgm"
 
 [node name="BgmTitle" type="AudioStreamPlayer" parent="."]
@@ -191,7 +195,7 @@ stream = ExtResource("7_uttcu")
 bus = &"Bgm"
 
 [node name="BgmOverworld" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_uttcu")
+stream = ExtResource("45_4cv44")
 bus = &"Bgm"
 
 [node name="BgmOverworld2" type="AudioStreamPlayer" parent="."]
