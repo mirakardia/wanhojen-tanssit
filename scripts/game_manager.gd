@@ -19,6 +19,15 @@ func get_game_state(key):
 signal open_dialog_scene(name: String)
 signal close_dialog(name: String)
 
+@onready var menu = get_node("/root/PauseMenu")
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.is_action_pressed("ui_cancel"):
+			print("test")
+			menu.visible = not menu.visible
+#		if event.is_action_pressed("ui_text_newline"):
+#			emit_signal("open_dialog_scene", "test")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

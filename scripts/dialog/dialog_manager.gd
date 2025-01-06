@@ -68,8 +68,6 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.is_action_pressed("ui_accept"):
 			skip_or_next()
-		if event.is_action_pressed("ui_cancel"):
-			dialog_box.visible_ratio = 1
 
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
