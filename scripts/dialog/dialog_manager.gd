@@ -57,13 +57,13 @@ func load_participant_data() -> void:
 
 
 func _process(_delta: float) -> void:
-	if dialog_box.visible_ratio < 1:
+	if dialog_box.visible_ratio < 1 and not game_manager.menu_state:
 		dialog_box.visible_characters += text_speed
 		
 		SoundManager.speak_gibberish()
 		
 func _input(event: InputEvent) -> void:
-	if not in_dialog:
+	if not in_dialog or game_manager.menu_state:
 		return
 	if event is InputEventKey:
 		if event.is_action_pressed("ui_accept"):
