@@ -1,8 +1,8 @@
 {
-  "start": "mölkky-0-1",
+  "start": "mölkky-1-1-1",
   "dialog": [
 	{
-	  "name": "mölkky-0-1",
+	  "name": "mölkky-1-1-1",
 	  "speaker": "mölkky",
 	  "effects": [
 		{
@@ -13,252 +13,269 @@
 		  "type": "join_conversation",
 		  "actor": "kimble"
 		},
+		{
+		  "type": "play_bgm",
+		  "track": "bgm_molkky"
+		}
 	  ],
 	  "text": "*Iso himbohymy naamalla* “Ai hei, moikka! Ehdin sittenkin koululle. Piti ruinata äiteeltä kyyti, kun maasturista petti taka-akselin kampihela.”",
-	  "next": "mölkky-0-2"
-	},
-	{
-	  "name": "mölkky-0-2",
-	  "speaker": "kimble",
-	  "effects": [],
-	  "text": "“Taka-akselin kampela, aivan joo. Tiiän tarkalleen mistä puhut.”",
-	  "next": "mölkky-0-3"
-	},
-	{
-	  "name": "mölkky-0-3",
-	  "speaker": "mölkky",
-	  "effects": [],
-	  "text": "“Joo, enköhän mä saa sen reilaan vielä tänä iltana. Hahaha – muistatko kun kokeilit ajaa maasturilla ekaa kertaa? Raasu piti onkia ojasta virvelillä.”",
-	  "responses": [
-		{
-		  "text": "Työnnän SUT ojaan!",
-		  "next": "mölkky-1-1"
-		},
-		{
-		  "text": "Itsehän mä ojasta nousin",
-		  "next": "mölkky-1-2",
-		  "reactions": {
-			"mölkky": 1
-		  }
-		},
-		{
-		  "text": "Mennään ajelemaan taas!",
-		  "next": "mölkky-1-3",
-		  "reactions": {
-			"mölkky": 2
-		  }
-		}
-	  ]
-	},
-	{
-	  "name": "mölkky-1-1",
-	  "speaker": "kimble",
-	  "effects": [],
-	  "text": "“Työnnän sut kohta ojaan!”",
-	  "next": "mölkky-1-1-1"
-	},
-	{
-	  "name": "mölkky-1-2",
-	  "speaker": "kimble",
-	  "effects": [],
-	  "text": "“Hetkinen, ihan omin nokkinenihan mä sieltä nousin!”",
-	  "next": "mölkky-1-2-1"
-	},
-	{
-	  "name": "mölkky-1-3",
-	  "speaker": "kimble",
-	  "effects": [],
-	  "text": "“Lähtisin kyllä uudelleen maasturilla ajelemaan heti, kun vaan päästät!”",
-	  "next": "mölkky-1-3-1"
-	},
-	{
-	  "name": "mölkky-1-1-1",
-	  "speaker": "mölkky",
-	  "effects": [],
-	  "text": "“Ai… Älä nyt, ei se ois kovin hauskaa…”",
 	  "next": "mölkky-1-1-2"
 	},
 	{
 	  "name": "mölkky-1-1-2",
 	  "speaker": "kimble",
 	  "effects": [],
+	  "text": "“Taka-akselin kampela, aivan joo. Tiiän tarkalleen mistä puhut.”",
+	  "next": "mölkky-1-1-3"
+	},
+	{
+	  "name": "mölkky-1-1-3",
+	  "speaker": "mölkky",
+	  "effects": [],
+	  "text": "“Joo, enköhän mä saa sen reilaan vielä tänä iltana. Hahaha – muistatko kun kokeilit ajaa maasturilla ekaa kertaa? Raasu piti onkia ojasta virvelillä.”",
+	  "responses": [
+		{
+		  "text": "Työnnän SUT ojaan!",
+		  "next": "mölkky-1-1a-1"
+		},
+		{
+		  "text": "Itsehän mä ojasta nousin",
+		  "next": "mölkky-1-1b-1",
+		  "reactions": {
+			"mölkky": 1
+			}
+		},
+		{
+		  "text": "Mennään ajelemaan taas!",
+		  "next": "mölkky-1-1c-1",
+		  "reactions": 
+			{"mölkky": 2}
+		  
+		}
+	  ]
+	},
+	{
+	  "name": "mölkky-1-1a-1",
+	  "speaker": "kimble",
+	  "effects": [],
+	  "text": "“Työnnän sut kohta ojaan!”",
+	  "next": "mölkky-1-1a-2"
+	},
+	{
+	  "name": "mölkky-1-1a-2",
+	  "speaker": "mölkky",
+	  "effects": [],
+	  "text": "“Ai… Älä nyt, ei se ois kovin hauskaa…”",
+	  "next": "mölkky-1-1a-3"
+	},
+	{
+	  "name": "mölkky-1-1a-3",
+	  "speaker": "kimble",
+	  "effects": [],
 	  "text": "“Äh, en mä nyt oikeesti.”",
-	  "next": "mölkky-2-1"
+	  "next": "mölkky-1-2-1"
+	},
+	{
+	  "name": "mölkky-1-1b-1",
+	  "speaker": "kimble",
+	  "effects": [],
+	  "text": "“Hetkinen, ihan omin nokkinenihan mä sieltä nousin!”",
+	  "next": "mölkky-1-1b-2"
+	},
+	{
+	  "name": "mölkky-1-1b-2",
+	  "speaker": "mölkky",
+	  "effects": [],
+	  "text": "“Ai! No… ehkä mä muistan väärin…”",
+	  "next": "mölkky-1-1b-3"
+	},
+	{
+	  "name": "mölkky-1-1b-3",
+	  "speaker": "kimble",
+	  "effects": [],
+	  "text": "“Takuulla muistat. Nauroitte vielä päälle, kun ryömin ku suomonsteri.”",
+	  "next": "mölkky-1-1b-4"
+	},
+	{
+	  "name": "mölkky-1-1b-4",
+	  "speaker": "mölkky",
+	  "effects": [],
+	  "text": "“Ei kai me nyt sentään naurettu… Ehkä vähän kyllä.”",
+	  "next": "mölkky-1-2-1"
+	},
+	{
+	  "name": "mölkky-1-1c-1",
+	  "speaker": "kimble",
+	  "effects": [],
+	  "text": "“Lähtisin kyllä uudelleen maasturilla ajelemaan heti, kun vaan päästät!”",
+	  "next": "mölkky-1-1c-2"
+	},
+	{
+	  "name": "mölkky-1-1c-2",
+	  "speaker": "mölkky",
+	  "effects": [],
+	  "text": "“Joo, hei, totta kai, kuulostaa kivalta! Tuu meille vaikka tänä iltana.”",
+	  "next": "mölkky-1-1c-3"
+	},
+	{
+	  "name": "mölkky-1-1c-3",
+	  "speaker": "mölkky",
+	  "effects": [],
+	  "text": "“Kattellaan sitä!”",
+	  "next": "mölkky-1-2-1"
 	},
 	{
 	  "name": "mölkky-1-2-1",
 	  "speaker": "mölkky",
 	  "effects": [],
-	  "text": "“Ai! No… ehkä mä muistan väärin…”",
+	  "text": "“Hei, muuten, saiks sä luettua siihen bilsan kokeeseen?”",
 	  "next": "mölkky-1-2-2"
 	},
 	{
 	  "name": "mölkky-1-2-2",
 	  "speaker": "kimble",
 	  "effects": [],
-	  "text": "“Takuulla muistat. Nauroitte vielä päälle, kun ryömin ku suomonsteri.”",
+	  "text": "“Vähän niin ja näin, oikeestaan jätin kokonaan–”",
 	  "next": "mölkky-1-2-3"
 	},
 	{
 	  "name": "mölkky-1-2-3",
 	  "speaker": "mölkky",
 	  "effects": [],
-	  "text": "“Ei kai me nyt sentään naurettu… Ehkä vähän kyllä.”",
-	  "next": "mölkky-2-1"
-	},
-	{
-	  "name": "mölkky-1-3-1",
-	  "speaker": "mölkky",
-	  "effects": [],
-	  "text": "“Joo, hei, totta kai, kuulostaa kivalta! Tuu meille vaikka tänä iltana.”",
-	  "next": "mölkky-1-3-2"
-	},
-	{
-	  "name": "mölkky-1-3-2",
-	  "speaker": "mölkky",
-	  "effects": [],
-	  "text": "“Kattellaan sitä!”",
-	  "next": "mölkky-2-1"
-	},
-	{
-	  "name": "mölkky-2-1",
-	  "speaker": "mölkky",
-	  "effects": [],
-	  "text": "“Hei, muuten, saiks sä luettua siihen bilsan kokeeseen?”",
-	  "next": "mölkky-2-2"
-	},
-	{
-	  "name": "mölkky-2-2",
-	  "speaker": "kimble",
-	  "effects": [],
-	  "text": "“Vähän niin ja näin, oikeestaan jätin kokonaan–”",
-	  "next": "mölkky-2-3"
-	},
-	{
-	  "name": "mölkky-2-3",
-	  "speaker": "mölkky",
-	  "effects": [],
 	  "text": "“Ei kun mitä turhia mä kyselen, sähän aceet bilsan aina. Oot niin sika taitava!”\n",
-	  "next": "mölkky-2-4"
+	  "next": "mölkky-1-2-4"
 	},
 	{
-	  "name": "mölkky-2-4",
+	  "name": "mölkky-1-2-4",
 	  "speaker": "kimble",
 	  "effects": [],
 	  "text": "“Älä nyt, enhän mä nyt niin…”",
-	  "next": "mölkky-2-5"
+	  "next": "mölkky-1-2-5"
 	},
 	{
-	  "name": "mölkky-2-5",
+	  "name": "mölkky-1-2-5",
 	  "speaker": "mölkky",
 	  "effects": [],
 	  "text": "“Wuu-uu! Meidän %s on koulumestari, hei! Jee jee! Meidän %s on koulumestari!”",
 	  "responses": [
 		{
 		  "text": "Eii, lopeta!",
-		  "next": "mölkky-2-5-1-1",
-		  "reactions": {
-			"mölkky": 0
-		  }
+		  "next": "mölkky-1-2a-1",
+		  "reactions": 
+			{"mölkky": 0}
+		  
 		},
 		{
-		  "text": "*punastelee kainosti*",
-		  "next": "mölkky-2-5-2",
-		  "reactions": {
-			"mölkky": 1
-		  }
+		  "text": "*punastele kainosti*",
+		  "next": "mölkky-1-2b-1",
+		  "reactions": 
+			{"mölkky": 1}
+		  
 		},
 		{
 		  "text": "Liity hurraukseen mukaan",
-		  "next": "mölkky-2-5-3",
-		  "reactions": {
-			"mölkky": 2
-		  }
+		  "next": "mölkky-1-2c-1",
+		  "reactions": 
+			{"mölkky": 2}
+		  
 		}
 	  ]
 	},
 	{
-	  "name": "mölkky-2-5-1-1",
+	  "name": "mölkky-1-2a-1",
 	  "speaker": "kimble",
 	  "effects": [],
 	  "text": "“Älä nyt hemmetti, kaikki kuulee! Noloo!”",
-	  "next": "mölkky-2-5-1-2"
+	  "next": "mölkky-1-2a-2"
 	},
 	{
-	  "name": "mölkky-2-5-1-2",
+	  "name": "mölkky-1-2a-2",
 	  "speaker": "mölkky",
 	  "effects": [],
 	  "text": "“Meidän %s…! Ai, no, anteeks, en mä aatellu…”",
-	  "next": "mölkky-2-5-1-3"
+	  "next": "mölkky-1-2a-3"
 	},
 	{
-	  "name": "mölkky-2-5-1-3",
+	  "name": "mölkky-1-2a-3",
+	  "speaker": "kimble",
+	  "effects": [],
+	  "text": "*pudistelee päätä*",
+	  "next": "mölkky-1-2a-4"
+	},
+	{
+	  "name": "mölkky-1-2a-4",
 	  "speaker": "mölkky",
 	  "effects": [],
 	  "text": "“Sori oikeesti, ei mun–”",
-	  "next": "mölkky-2-5-1-4"
+	  "next": "mölkky-1-2a-5"
 	},
 	{
-	  "name": "mölkky-2-5-1-4",
+	  "name": "mölkky-1-2a-5",
 	  "speaker": "kimble",
 	  "effects": [],
 	  "text": "“Joo joo, ei se mitään, mut älä hyvä ihminen mesoa…”",
-	  "next": "mölkky-2-6"
+	  "next": "mölkky-1-3-1"
 	},
 	{
-	  "name": "mölkky-2-5-2",
+	  "name": "mölkky-1-2b-1",
 	  "speaker": "kimble",
 	  "effects": [],
 	  "text": "*punastelee kainosti*",
-	  "next": "mölkky-2-5-2-2"
+	  "next": "mölkky-1-2b-2"
 	},
 	{
-	  "name": "mölkky-2-5-2-2",
+	  "name": "mölkky-1-2b-2",
 	  "speaker": "mölkky",
 	  "effects": [],
 	  "text": "“Meidän %s osaa kaa-ii-ken! Jee jee! Meidän %s osaa kaa-ii-ken!”",
-	  "next": "mölkky-2-5-2-3"
+	  "next": "mölkky-1-2b-3"
 	},
 	{
-	  "name": "mölkky-2-5-2-3",
+	  "name": "mölkky-1-2b-3",
 	  "speaker": "kimble",
 	  "effects": [],
 	  "text": "*punastelu voimistuu*",
-	  "next": "mölkky-2-6"
+	  "next": "mölkky-1-3-1"
 	},
 	{
-	  "name": "mölkky-2-5-3",
+	  "name": "mölkky-1-2c-1",
 	  "speaker": "kimble",
 	  "effects": [],
 	  "text": "“Meidän Mölkky on koulumestari, hei! Jee jee! Meidän Mölkky on koulumestari!”",
-	  "next": "mölkky-2-5-3-2"
+	  "next": "mölkky-1-2c-2"
 	},
 	{
-	  "name": "mölkky-2-5-3-2",
+	  "name": "mölkky-1-2c-2",
 	  "speaker": "mölkky",
 	  "effects": [],
 	  "text": "“Meidän %s osaa kaa-ii-ken! Jee jee! Meidän %s osaa kaa-ii-ken!”",
-	  "next": "mölkky-2-5-3-3"
+	  "next": "mölkky-1-2c-3"
 	},
 	{
-	  "name": "mölkky-2-5-3-3",
-	  "speaker": "mölkky",
-	  "effects": [],
-	  "text": "“Meidän Mölkky osaa kaa-ii-ken! Jee jee! Meidän %s osaa kaa-ii-ken!”",
-	  "next": "mölkky-2-5-3-4"
-	},
-	{
-	  "name": "mölkky-2-5-3-4",
+	  "name": "mölkky-1-2c-3",
 	  "speaker": "kimble",
 	  "effects": [],
-	  "text": "“Jee jee!”",
-	  "next": "mölkky-2-6"
+	  "text": "“Meidän Mölkky osaa kaa-ii-ken! Jee jee! Meidän %s osaa kaa-ii-ken!”",
+	  "next": "mölkky-1-2c-4"
 	},
 	{
-	  "name": "mölkky-2-6",
+	  "name": "mölkky-1-2c-4",
 	  "speaker": "mölkky",
-	  "text": "“Ei mutta mulla alkaa tunti ihan just, pitää alkaa valua luokkaan. Moido!”",
+	  "effects": [],
+	  "text": "“Jee jee!”",
+	  "next": "mölkky-1-2c-5"
 	},
-	
+	{
+	  "name": "mölkky-1-2c-5",
+	  "speaker": "mölkky",
+	  "effects": [],
+	  "text": "“Jee jee!”",
+	  "next": "mölkky-1-3-1"
+	},
+	{
+	  "name": "mölkky-1-3-1",
+	  "speaker": "mölkky",
+	  "text": "“Ei mutta mulla alkaa tunti ihan just, pitää alkaa valua luokkaan. Moido!”"
+	}
   ]
 }

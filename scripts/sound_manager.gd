@@ -12,6 +12,9 @@ extends Node
 @onready var sfx_puhe_villa: AudioStreamPlayer = $SfxPuheVilla
 @onready var sfx_puhe_generic: AudioStreamPlayer = $SfxPuheGeneric
 @onready var sfx_valinta_valikko: AudioStreamPlayer = $SfxValintaValikko
+@onready var sfx_valinta_keskustelu: AudioStreamPlayer = $SfxValintaKeskustelu
+@onready var sfx_map_ovi: AudioStreamPlayer = $SfxMapOvi
+@onready var sfx_keskustelu_ilahtuu: AudioStreamPlayer = $SfxKeskusteluIlahtuu
 
 # Background music
 # SoundManager.play_bgm("bgm_name")
@@ -23,6 +26,7 @@ var current_bgm = null
 		"bgm_sakari" = $BgmSakari,
 		"bgm_molkky" = $BgmMolkky,
 		"bgm_afrikka" = $BgmAfrikka,
+		"bgm_birb" = $BgmBirb,
 		"bgm_pallomato" = $BgmPallomato,
 		"bgm_title" = $BgmTitle,
 		"bgm_overworld" = $BgmOverworld,

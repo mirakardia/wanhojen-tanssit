@@ -110,7 +110,7 @@ func find_dialog(dialog_name: String) -> Dictionary:
 			return dialog
 	push_error("Couldn't find dialog with name: " + dialog_name)
 	return {}
-const player_name = "Minä"
+const player_name = "Kim"
 
 func start_dialog (dialog_name: String) -> void:
 	print("test")

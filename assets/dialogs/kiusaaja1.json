@@ -1,0 +1,15 @@
+{
+  
+	"start": "kiusaaja1",
+	"dialog": [
+	  {
+		"name": "kiusaaja1",
+		"speaker": "kiusaaja",
+		"effects": [
+		
+		],
+		"text": "“Ykskään nörtti ei ole turvassa, kun meikä pitää jöötä…”"
+	  }
+	]
+  
+}

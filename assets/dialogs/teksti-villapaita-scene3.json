@@ -1,0 +1,249 @@
+{
+  
+	"start": "villapaita-3-1-1",
+	"dialog": [
+	  {
+		"name": "villapaita-3-1-1",
+		"speaker": "kimble",
+		"effects": [
+		  {
+			"type": "join_conversation",
+			"actor": "kimble"
+		  },
+		  {
+			"type": "join_conversation",
+			"actor": "villapaita"
+		  },
+		{
+		  "type": "play_bgm",
+		  "track": "bgm_sakari"
+		}
+		],
+		"text": "“Hei oota, Villapaita!”",
+		"next": "villapaita-3-1-2"
+	  },
+	  {
+		"name": "villapaita-3-1-2",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Terwechdus / Olin iwri lächdos tapaaman Pyche Zachariust / swrint Esi-Quwajn/ Cerro sijs asiajz”",
+		"next": "villapaita-3-1-3"
+	  },
+	  {
+		"name": "villapaita-3-1-3",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Ai… Sakaria? Ketä siis?”",
+		"next": "villapaita-3-1-4"
+	  },
+	  {
+		"name": "villapaita-3-1-4",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Niin / coco Culma-Cundajn hienojnta Mieste / Hän ombi cajckei Willazt techtuien Waatejdhen Suoieluz-Puchimyz / Caickist elewejzist Swrin”",
+		"responses": [
+		  {
+			"text": "Eikös Sakari ole tavallinen heppu",
+			"next": "villapaita-3-1a-1"
+		  },
+		  {
+			"text": "Sakarin maine kiirii edellään",
+			"next": "villapaita-3-1b-1",
+			"reactions": {
+			  "villapaita": 1
+			}
+		  },
+		  {
+			"text": "Pyhä Sakari; tietenkin!",
+			"next": "villapaita-3-1c-1",
+			"reactions": {
+			  "villapaita": 2
+			}
+		  }
+		]
+	  },
+	  {
+		"name": "villapaita-3-1a-1",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“...Hetkinen, eikös Sakari ole ihan tavallinen heppu keskustan liepeiltä?”",
+		"next": "villapaita-3-1a-2"
+	  },
+	  {
+		"name": "villapaita-3-1a-2",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Panetelwa ia Harcha-Obia / Häbiäjzit / mocoma Hereetiläjne”",
+		"next": "villapaita-3-1a-3"
+	  },
+	  {
+		"name": "villapaita-3-1a-3",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Zacharius ombi Kajckist swrin ja kawnejn Pychimus / Kechtatgi solwata henen nimeän”",
+		"next": "villapaita-3-2-1"
+	  },
+	  {
+		"name": "villapaita-3-1b-1",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Sakari, aivan! Hänhän on maineikas ympäri koko seutukunnan, ja paljon oon siitä kuullu.”",
+		"next": "villapaita-3-1b-2"
+	  },
+	  {
+		"name": "villapaita-3-1b-2",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Warmazt Corwijs ombi Candawdunu wajn Uro-Töit ja Ichmejt / Semmojne näet Puchä Zacharius totizest ombi”",
+		"next": "villapaita-3-2-1"
+	  },
+	  {
+		"name": "villapaita-3-1c-1",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Pyhä Sakari, tietysti… Häntä ylistetään parhaissa piireissä aina, kun, öö, evankelis-luterilaisen inkvisition silmä välttää. Ylistetty olkoon!”",
+		"next": "villapaita-3-1c-2"
+	  },
+	  {
+		"name": "villapaita-3-1c-2",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Cajckizt Caunejn ia Arvockain Pychimus / Pychitetu olcon hänen nimens / Hänen Walda-Cundans on jo tääle / ia Cansa on caicki welä kentywä hänen Alamaisisen”",
+		"next": "villapaita-3-2-1"
+	  },
+	  {
+		"name": "villapaita-3-2-1",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Hei, niin, halusin vielä kysyä siitä… tanssipartneriudesta?”",
+		"next": "villapaita-3-2-2"
+	  },
+	  {
+		"name": "villapaita-3-2-2",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Puchu huolez /”",
+		"responses": [
+		  {
+			
+			"text": "Niin että tanssitaanko?",
+			"next": "villapaita-3-2a-1"
+		  },
+		  {
+			"text": "Tanssisimmeko ritarillisuuden puolesta?",
+			"next": "villapaita-3-2b-1",
+			"reactions": {
+			  "villapaita": 1
+			}
+		  },
+		  {
+			"requirements": [{
+			  "key": "albumi",
+			  "value": "true",
+			  "type": "equal"
+			}],
+			"text": "Albumi",
+			"next": "villapaita-3-2c-1",
+			"reactions": {
+			  "villapaita": 2
+			}
+		  }
+		]
+	  },
+	  {
+		"name": "villapaita-3-2b-1",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Lähtisitkö siis kanssani tanssimaan wanhat?”",
+		"next": "villapaita-3-3-1"
+	  },
+	  {
+		"name": "villapaita-3-2a-1",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Sun sanas on kääntäny mun sydämen, ja haluan tehdä kunniaa ritarilliselle järjestykselle ja sivistykselle. Tahtoisin tanssia sun kanssa vanhat niiden nimessä.”",
+		"next": "villapaita-3-3-1"
+	  },
+	  {
+		"name": "villapaita-3-2c-1",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Löysin tällasen kokoelman… joo. Kuuluu käsialasta päätellen sulle. Mielenkiintosia kuvia muuan Sakarista, täytyy kyllä sanoa…”",
+		"next": "villapaita-3-2c-2"
+	  },
+	  {
+		"name": "villapaita-3-2c-2",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Mite / Mocoma Muli-Saugon Pojcane / Ritarjn Omajswten cajoawajne / Ojendha Album oitiz”",
+		"next": "villapaita-3-3-3"
+	  },
+	  {
+		"name": "villapaita-3-2c-3",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Ei niin vikkelästi. Tehkäämme ritarillista vaihtokauppaa. Mitä jos nostasit mun sijoittumista tanssipartnerikandidaattien joukossa?”",
+		"next": "villapaita-3-2c-4"
+	  },
+	  {
+		"name": "villapaita-3-2c-4",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Waj kiriztyst harjotat welä / Mmch…”",
+		"next": "villapaita-3-3-5"
+	  },
+	  {
+		"name": "villapaita-3-2c-5",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Hywe on / Se ombi wechinde / mite wojn löuteien Palckioxi tariota / Homiojn Hywen Teon / cuni arwijoin Sinu Candidatei joucos.”",
+		"next": "villapaita-3-2c-6"
+	  },
+	  {
+		"name": "villapaita-3-2c-6",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "“Kaupat tuli.”",
+		"next": "villapaita-3-3-1"
+	  },
+	  {
+		"name": "villapaita-3-3-1",
+		"speaker": "kimble",
+		"effects": [],
+		"text": "Tanssimaan?",
+		"responses": [
+		  {
+			"text": "Tanssimaan!",
+			"next": "villapaita-3-3-win",
+			"requirements": [{
+			  "key": "villapaita",
+			  "value": 6,
+			  "type": "greater"
+			}]
+		  },
+		  {
+			"text": "Ei tanssimaan :(",
+			"next": "villapaita-3-3-lose",
+			"requirements": [{
+			  "key": "villapaita",
+			  "value": 7,
+			  "type": "lower"
+			}]
+		  }
+		]
+	  },
+	  {
+		"name": "villapaita-3-3-win",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Walintai ej telle Kerda walitetawazt Cohdizdunu Sinun / Parembi Fortwni enzi Cerral / ios Tanzimizt wiel Tulewan Wuon harkizet”"
+	  },
+	  {
+		"name": "villapaita-3-3-lose",
+		"speaker": "villapaita",
+		"effects": [],
+		"text": "“Arwot / Tanziliset Taidhot ia Pärste-Ceroin hwomion-ottaen olet / jwri ia jwri läbäisut seulani / Olet kelbojne Partnerixi Iuhla-Woden swrimban Tanzi-Tapachtuman / Lehtekem ojtiz teckemen tarwitawi Walmizteluia”"
+	  }
+	]
+  
+}
