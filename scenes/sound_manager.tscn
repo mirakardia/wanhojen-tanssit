@@ -37,10 +37,10 @@
 [ext_resource type="AudioStream" uid="uid://bfc60qdckq084" path="res://assets/puheääniä/terve6.wav" id="26_tew5o"]
 [ext_resource type="AudioStream" uid="uid://b3vhneup2evp" path="res://assets/kenney_interface-audio/select_007.ogg" id="30_6s4ae"]
 [ext_resource type="AudioStream" uid="uid://cu6o5msmi0yw6" path="res://assets/kenney_interface-audio/open_001.ogg" id="31_6rv8j"]
-[ext_resource type="AudioStream" uid="uid://x0bhfyqkdr1b" path="res://assets/kenney_interface-audio/confirmation_001.ogg" id="33_gxvyb"]
-[ext_resource type="AudioStream" uid="uid://iklrlq804tgd" path="res://assets/kenney_interface-audio/confirmation_002.ogg" id="34_qfcv2"]
-[ext_resource type="AudioStream" uid="uid://qolulorhj81g" path="res://assets/kenney_interface-audio/confirmation_003.ogg" id="35_l6cg0"]
-[ext_resource type="AudioStream" uid="uid://5rlkxd3i1ks5" path="res://assets/kenney_interface-audio/confirmation_004.ogg" id="36_jb8y1"]
+[ext_resource type="AudioStream" uid="uid://dsu6kibi8qpxt" path="res://assets/kenney_ui-audio/rollover1.ogg" id="36_8feqk"]
+[ext_resource type="AudioStream" uid="uid://dgvj4k0eov71t" path="res://assets/kenney_ui-audio/rollover2.ogg" id="37_oljhd"]
+[ext_resource type="AudioStream" uid="uid://bq253sl2hi5yk" path="res://assets/kenney_ui-audio/rollover3.ogg" id="38_gjrds"]
+[ext_resource type="AudioStream" uid="uid://d2lr4eerp53ow" path="res://assets/kenney_ui-audio/rollover4.ogg" id="39_robgs"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dkdwv"]
 random_pitch = 1.1
@@ -98,10 +98,10 @@ stream_5/stream = ExtResource("26_tew5o")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hkuhf"]
 streams_count = 4
-stream_0/stream = ExtResource("33_gxvyb")
-stream_1/stream = ExtResource("34_qfcv2")
-stream_2/stream = ExtResource("35_l6cg0")
-stream_3/stream = ExtResource("36_jb8y1")
+stream_0/stream = ExtResource("36_8feqk")
+stream_1/stream = ExtResource("37_oljhd")
+stream_2/stream = ExtResource("38_gjrds")
+stream_3/stream = ExtResource("39_robgs")
 
 [node name="SoundManager" type="Node"]
 script = ExtResource("1_6wc0h")
@@ -159,6 +159,10 @@ stream = ExtResource("20_gbxdd")
 bus = &"Sfx"
 
 [node name="SfxSparkles" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_hkuhf")
+bus = &"Sfx"
+
+[node name="SfxRollover" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_hkuhf")
 bus = &"Sfx"
 

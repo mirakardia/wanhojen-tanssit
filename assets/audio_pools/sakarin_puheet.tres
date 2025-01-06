@@ -1,6 +1,6 @@
 [gd_resource type="AudioStreamRandomizer" load_steps=7 format=3 uid="uid://d3ttemb62vhn4"]
 
-[ext_resource type="AudioStream" uid="uid://bjfei8yjrt8pp" path="res://assets/puheääniä/ruuhka2.wav" id="1_mgx04"]
+[ext_resource type="AudioStream" uid="uid://dvrt3rk6pp0x7" path="res://assets/puheääniä/ruuhka2.wav" id="1_mgx04"]
 [ext_resource type="AudioStream" uid="uid://olnaa3a8oqha" path="res://assets/puheääniä/ruuhka3.wav" id="2_46fog"]
 [ext_resource type="AudioStream" uid="uid://dbg25pxtpktim" path="res://assets/puheääniä/ruuhka4.wav" id="3_bf3lj"]
 [ext_resource type="AudioStream" uid="uid://dtoy2yfmoe84d" path="res://assets/puheääniä/ruuhka5.wav" id="4_ofdtf"]

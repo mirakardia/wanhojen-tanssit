@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5mgi7o2rejxc"]
+[gd_scene load_steps=7 format=3 uid="uid://b5mgi7o2rejxc"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bf3ox"]
 [ext_resource type="PackedScene" uid="uid://e3atnr4jvvv0" path="res://scenes/pause-options-menu/volume_slider.tscn" id="1_j2cf2"]
 [ext_resource type="PackedScene" uid="uid://23drddl3ydow" path="res://scenes/pause-options-menu/mute_toggle.tscn" id="2_hdrv7"]
 [ext_resource type="Script" path="res://scenes/pause-options-menu/volume_slider.gd" id="4_27s16"]
 [ext_resource type="PackedScene" uid="uid://dejuqhlqgf3lm" path="res://scenes/pause-options-menu/inventory_item.tscn" id="4_bbt8x"]
+[ext_resource type="Script" path="res://scenes/pause-options-menu/volume_slider-sfx.gd" id="4_ecjb2"]
 
 [node name="PanelContainer" type="Control"]
 layout_mode = 3
@@ -29,7 +30,7 @@ layout_mode = 0
 offset_left = 143.0
 offset_top = 45.0
 offset_right = 889.0
-offset_bottom = 962.0
+offset_bottom = 737.0
 
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
@@ -166,6 +167,7 @@ offset_bottom = 482.0
 
 [node name="VolumeSliderSfx" parent="sfx-slider3" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
+script = ExtResource("4_ecjb2")
 bus_name = "sfx"
 
 [node name="sfx-toggle3" type="PanelContainer" parent="."]
@@ -204,6 +206,7 @@ offset_bottom = 587.0
 [node name="VolumeSliderSpeech" parent="puhe-slider4" instance=ExtResource("1_j2cf2")]
 layout_mode = 2
 mouse_filter = 1
+rounded = true
 script = ExtResource("4_27s16")
 bus_name = "speech"
 
@@ -225,7 +228,7 @@ layout_mode = 0
 offset_left = 951.0
 offset_top = 45.0
 offset_right = 1414.0
-offset_bottom = 970.0
+offset_bottom = 732.0
 
 [node name="otsikko-panel2" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -244,7 +247,7 @@ layout_mode = 0
 offset_left = 985.0
 offset_top = 123.0
 offset_right = 1392.0
-offset_bottom = 903.0
+offset_bottom = 621.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="otsikko-panel3"]
 layout_mode = 2

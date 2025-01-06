@@ -15,6 +15,7 @@ extends Node
 @onready var sfx_valinta_keskustelu: AudioStreamPlayer = $SfxValintaKeskustelu
 @onready var sfx_map_ovi: AudioStreamPlayer = $SfxMapOvi
 @onready var sfx_keskustelu_ilahtuu: AudioStreamPlayer = $SfxKeskusteluIlahtuu
+@onready var sfx_rollover: AudioStreamPlayer = $SfxRollover
 
 # Background music
 # SoundManager.play_bgm("bgm_name")
@@ -53,7 +54,7 @@ var gibberish_profile : String = "default"
 		}
 
 func test_sfx() -> void:
-	sfx_valinta_valikko.play()
+	sfx_rollover.play()
 
 func set_volume(vol : float, bus : String = "master") -> void:
 	AudioServer.set_bus_volume_db(
