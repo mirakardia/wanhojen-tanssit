@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bx1f4qfpl6o02"]
+[gd_scene load_steps=3 format=3 uid="uid://bas7v4xslevya"]
 
 [ext_resource type="Script" path="res://scripts/dialog/participant.gd" id="1_7v7kt"]
 [ext_resource type="Texture2D" uid="uid://bd0d435armm3p" path="res://assets/sprites/angsty_bird/dialog/angsty_bird_neutral.png" id="1_48f57"]
