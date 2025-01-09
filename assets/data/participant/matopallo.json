@@ -1,0 +1,15 @@
+{
+	"offset": -200,
+	"name": "Pallo ja Mato",
+	"font": "assets/fonts/matopallo.ttf",
+	"neutral": "neutral",
+	"reaction_origin": {
+		"x" : 0,
+		"y": -400
+	},
+	"emotes": {
+		"positive": "assets/sprites/bounce/dialog/pallo_positive.png",
+		"neutral": "assets/sprites/bounce/dialog/pallo_neutral.png",
+		"negative": "assets/sprites/bounce/dialog/pallo_negative.png"
+	}
+}

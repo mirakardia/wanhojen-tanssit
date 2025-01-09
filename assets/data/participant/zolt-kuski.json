@@ -2,6 +2,7 @@
 	"offset": 20,
 	"name": "Zolt-kuski",
 	"neutral": "neutral",
+	"font": "assets/fonts/npc.ttf",
 	"reaction_origin": {
 		"x" : 0,
 		"y": -300

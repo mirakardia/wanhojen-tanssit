@@ -6,7 +6,11 @@
 		"name": "kuvisope2",
 		"speaker": "kuvisope",
 		"effects": [
-		 
+		 		 {
+		  "type": "change_state",
+		  "key": "kuvisjuoru",
+			"value": "true"
+			}
 		],
 		"text": "“Tässä koulussa ei kiusata ketään! KiVa koulu -kampanja pitää siitä huolen.”"
 	  }

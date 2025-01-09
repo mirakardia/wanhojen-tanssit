@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://osyimkl6o8ur"]
+[gd_scene load_steps=21 format=4 uid="uid://osyimkl6o8ur"]
 
 [ext_resource type="PackedScene" uid="uid://bhpjsvi88cwd5" path="res://scenes/npc/npc.tscn" id="1_le7nj"]
 [ext_resource type="PackedScene" uid="uid://cg16safufilmg" path="res://scenes/player/player.tscn" id="1_xghhp"]
@@ -9,6 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://c77j758g04qyv" path="res://assets/sprites/bounce/overworld/bounce.png" id="7_0kpdc"]
 [ext_resource type="Texture2D" uid="uid://dj36oi2nvhfgm" path="res://assets/sprites/molkky/overworld/molkky.png" id="8_eiant"]
 [ext_resource type="Texture2D" uid="uid://cekddfbdrj7n1" path="res://assets/sprites/afrikan_tahti/overworld/afrikan_tahti.png" id="9_mvfan"]
+[ext_resource type="Texture2D" uid="uid://dx8il3g3ennl7" path="res://assets/sprites/hihittelija/overworld/hihittelija.png" id="10_tajy5"]
+[ext_resource type="Texture2D" uid="uid://4e11m82uooe1" path="res://assets/sprites/keittajarotta/overworld/keittajarotta.png" id="11_m34ct"]
+[ext_resource type="Texture2D" uid="uid://dj1p6vjpcyc68" path="res://assets/sprites/marko/overworld/marko.png" id="12_elbsu"]
+[ext_resource type="Texture2D" uid="uid://c5i05tj1wv6yw" path="res://assets/sprites/props/overworld/zoltkuski.png" id="13_ws016"]
+[ext_resource type="Texture2D" uid="uid://d0dqxqrhv51gr" path="res://assets/sprites/kuvisope/overworld/kuvisope.png" id="14_15urg"]
+[ext_resource type="Texture2D" uid="uid://c68bhp1eyljve" path="res://assets/sprites/title_screen/title.png" id="15_2poiy"]
+[ext_resource type="Script" path="res://scripts/title.gd" id="16_hyjn6"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_hprcp"]
 tile_data = PackedInt32Array(0, 655360, 1, 65536, 655360, 1, 131072, 655360, 1, 196608, 655360, 1, 262144, 655360, 1, 327680, 655360, 1, 393216, 655360, 1, 458752, 655360, 1, 524288, 655360, 1, 589824, 655360, 1, 655360, 655360, 1, 720896, 655360, 1, 786432, 655360, 1, 851968, 655360, 1, 917504, 655360, 1, 983040, 655360, 1, 1, 655360, 1, 65537, 524288, 0, 131073, 524288, 1, 196609, 524288, 1, 262145, 524288, 1, 327681, 524288, 3, 393217, 524288, 0, 458753, 524288, 1, 524289, 524288, 1, 589825, 524288, 1, 655361, 524288, 3, 720897, 524288, 0, 786433, 524288, 1, 851969, 524288, 1, 917505, 524288, 3, 983041, 655360, 1, 2, 655360, 1, 65538, 655360, 0, 131074, 589824, 2, 196610, 589824, 2, 262146, 589824, 2, 327682, 589824, 3, 393218, 655360, 0, 458754, 589824, 2, 524290, 589824, 2, 589826, 589824, 2, 655362, 589824, 3, 720898, 655360, 0, 786434, 589824, 2, 851970, 589824, 2, 917506, 589824, 3, 983042, 655360, 1, 3, 655360, 1, 65539, 655360, 0, 131075, 589824, 2, 196611, 589824, 2, 262147, 589824, 2, 327683, 589824, 3, 393219, 655360, 0, 458755, 589824, 2, 524291, 589824, 2, 589827, 589824, 2, 655363, 589824, 3, 720899, 655360, 0, 786435, 589824, 2, 851971, 589824, 2, 917507, 589824, 3, 983043, 655360, 1, 4, 655360, 1, 65540, 655360, 0, 131076, 589824, 2, 196612, 589824, 2, 262148, 589824, 2, 327684, 589824, 3, 393220, 655360, 0, 458756, 589824, 2, 524292, 589824, 2, 589828, 589824, 2, 655364, 589824, 3, 720900, 655360, 0, 786436, 589824, 2, 851972, 589824, 2, 917508, 589824, 3, 983044, 655360, 1, 5, 655360, 1, 65541, 720896, 0, 131077, 720896, 2, 196613, 720896, 2, 262149, 720896, 2, 327685, 393216, 3, 393221, 720896, 0, 458757, 720896, 2, 524293, 720896, 1, 589829, 720896, 2, 655365, 720896, 3, 720901, 393216, 0, 786437, 720896, 2, 851973, 720896, 2, 917509, 720896, 3, 983045, 655360, 1, 6, 655360, 1, 65542, 524288, 0, 131078, 524288, 3, 196614, 524288, 0, 262150, 524288, 1, 327686, 524288, 2, 393222, 524288, 1, 458758, 524288, 1, 524294, 524288, 2, 589830, 524288, 1, 655366, 524288, 1, 720902, 524288, 2, 786438, 524288, 3, 851974, 655360, 1, 917510, 655360, 1, 983046, 655360, 1, 7, 655360, 1, 65543, 720896, 0, 131079, 458752, 2, 196615, 589824, 0, 262151, 589824, 2, 327687, 589824, 2, 393223, 589824, 2, 458759, 589824, 2, 524295, 589824, 2, 589831, 589824, 2, 655367, 589824, 2, 720903, 589824, 2, 786439, 589824, 3, 851975, 655360, 1, 917511, 655360, 1, 983047, 655360, 1, 8, 655360, 1, 65544, 524288, 0, 131080, 524288, 3, 196616, 655360, 0, 262152, 589824, 2, 327688, 393216, 2, 393224, 720896, 2, 458760, 720896, 2, 524296, 720896, 1, 589832, 720896, 2, 655368, 720896, 2, 720904, 720896, 1, 786440, 720896, 3, 851976, 655360, 1, 917512, 655360, 1, 983048, 655360, 1, 9, 655360, 1, 65545, 720896, 0, 131081, 458752, 2, 196617, 589824, 0, 262153, 589824, 2, 327689, 589824, 3, 393225, 524288, 0, 458761, 524288, 1, 524297, 524288, 2, 589833, 524288, 1, 655369, 524288, 3, 720905, 327680, 0, 786441, 524288, 1, 851977, 524288, 1, 917513, 524288, 3, 983049, 655360, 1, 10, 655360, 1, 65546, 524288, 0, 131082, 262144, 2, 196618, 589824, 0, 262154, 589824, 2, 327690, 589824, 3, 393226, 655360, 0, 458762, 589824, 2, 524298, 589824, 2, 589834, 589824, 2, 655370, 589824, 3, 720906, 655360, 0, 786442, 589824, 2, 851978, 589824, 2, 917514, 589824, 3, 983050, 655360, 1, 11, 655360, 1, 65547, 720896, 0, 131083, 720896, 3, 196619, 720896, 0, 262155, 720896, 2, 327691, 720896, 3, 393227, 655360, 0, 458763, 589824, 2, 524299, 589824, 2, 589835, 589824, 2, 655371, 589824, 3, 720907, 655360, 0, 786443, 589824, 2, 851979, 589824, 2, 917515, 589824, 3, 983051, 655360, 1, 12, 655360, 1, 65548, 655360, 1, 131084, 655360, 1, 196620, 655360, 1, 262156, 655360, 1, 327692, 655360, 1, 393228, 655360, 0, 458764, 589824, 2, 524300, 589824, 2, 589836, 589824, 2, 655372, 589824, 3, 720908, 655360, 0, 786444, 589824, 2, 851980, 589824, 2, 917516, 589824, 3, 983052, 655360, 1, 13, 655360, 1, 65549, 655360, 1, 131085, 655360, 1, 196621, 655360, 1, 262157, 655360, 1, 327693, 655360, 1, 393229, 720896, 0, 458765, 720896, 2, 524301, 720896, 2, 589837, 720896, 2, 655373, 720896, 3, 720909, 720896, 0, 786445, 720896, 2, 851981, 720896, 2, 917517, 720896, 3, 983053, 655360, 1, 14, 655360, 1, 65550, 655360, 1, 131086, 655360, 1, 196622, 655360, 1, 262158, 655360, 1, 327694, 655360, 1, 393230, 655360, 1, 458766, 655360, 1, 524302, 655360, 1, 589838, 655360, 1, 655374, 655360, 1, 720910, 655360, 1, 786446, 655360, 1, 851982, 655360, 1, 917518, 655360, 1, 983054, 655360, 1, 15, 655360, 1, 65551, 655360, 1, 131087, 655360, 1, 196623, 655360, 1, 262159, 655360, 1, 327695, 655360, 1, 393231, 655360, 1, 458767, 655360, 1, 524303, 655360, 1, 589839, 655360, 1, 655375, 655360, 1, 720911, 655360, 1, 786447, 655360, 1, 851983, 655360, 1, 917519, 655360, 1, 983055, 655360, 1)
@@ -494,7 +501,7 @@ sprite_anim_speed = 0.5
 [node name="NPC-bounce1" parent="." instance=ExtResource("1_le7nj")]
 position = Vector2(1775, 934)
 type = 0
-dialog = "matopal lo-scene1"
+dialog = "matopallo-scene1"
 sprite_sheet = ExtResource("7_0kpdc")
 spirte_hframes = 6
 sprite_anim_start = 5
@@ -659,3 +666,88 @@ sprite_sheet = ExtResource("9_mvfan")
 spirte_vframes = 6
 sprite_anim_end = 2
 sprite_anim_speed = 0.5
+
+[node name="NPC-hihittäjä1" parent="." instance=ExtResource("1_le7nj")]
+position = Vector2(1460, 723)
+type = 0
+dialog = "hihittäjä1"
+sprite_sheet = ExtResource("10_tajy5")
+spirte_hframes = 1
+spirte_vframes = 2
+sprite_anim_end = 1
+sprite_anim_speed = 0.5
+
+[node name="NPC-hihittäjä2" parent="." instance=ExtResource("1_le7nj")]
+position = Vector2(3443, 734)
+type = 0
+dialog = "hihittäjä2"
+sprite_sheet = ExtResource("10_tajy5")
+spirte_hframes = 1
+spirte_vframes = 2
+sprite_anim_end = 1
+sprite_anim_speed = 0.5
+
+[node name="NPC-keittäjä" parent="." instance=ExtResource("1_le7nj")]
+position = Vector2(4161, 475)
+type = 0
+dialog = "keittäjä"
+sprite_sheet = ExtResource("11_m34ct")
+spirte_hframes = 6
+spirte_vframes = 4
+sprite_anim_end = 2
+sprite_anim_speed = 0.5
+
+[node name="NPC-kiusaaja1" parent="." instance=ExtResource("1_le7nj")]
+position = Vector2(4076, 535)
+type = 0
+dialog = "kiusaaja1"
+sprite_sheet = ExtResource("12_elbsu")
+spirte_hframes = 2
+spirte_vframes = 2
+sprite_anim_speed = 0.5
+
+[node name="NPC-kiusaaja2" parent="." instance=ExtResource("1_le7nj")]
+position = Vector2(3840, 914)
+type = 0
+dialog = "kiusaaja2"
+sprite_sheet = ExtResource("12_elbsu")
+spirte_hframes = 2
+spirte_vframes = 2
+sprite_anim_speed = 0.5
+
+[node name="NPC-zolt" parent="." instance=ExtResource("1_le7nj")]
+position = Vector2(3714, 203)
+type = 0
+dialog = "zolt"
+sprite_sheet = ExtResource("13_ws016")
+spirte_hframes = 2
+spirte_vframes = 2
+sprite_anim_speed = 0.5
+
+[node name="NPC-kuvisope1" parent="." instance=ExtResource("1_le7nj")]
+position = Vector2(1588, 322)
+type = 0
+dialog = "kuvisope1"
+sprite_sheet = ExtResource("14_15urg")
+spirte_hframes = 2
+spirte_vframes = 2
+sprite_anim_speed = 0.5
+
+[node name="NPC-kuvisope2" parent="." instance=ExtResource("1_le7nj")]
+position = Vector2(3460, 899)
+type = 0
+dialog = "kuvisope2"
+sprite_sheet = ExtResource("14_15urg")
+spirte_hframes = 2
+spirte_vframes = 2
+sprite_anim_end = 1
+sprite_anim_speed = 0.5
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1274.0
+offset_top = 208.0
+offset_right = 3524.0
+offset_bottom = 1896.0
+scale = Vector2(0.214, 0.214)
+texture = ExtResource("15_2poiy")
+script = ExtResource("16_hyjn6")

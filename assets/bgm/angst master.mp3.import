@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://bmxvf5vjsldl1"
+uid="uid://c24lk5r3o7iiu"
 path="res://.godot/imported/angst master.mp3-4581a7df663b425c54b9e2ab0ae9fc02.mp3str"
 
 [deps]
@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/angst master.mp3-4581a7df663b425c54b9e2ab0ae9
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

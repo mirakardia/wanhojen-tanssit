@@ -1,14 +1,15 @@
 {
-	"offset": 20,
+	"offset": -300,
 	"name": "Pallo",
 	"neutral": "neutral",
+	"font": "assets/fonts/matopallo.ttf",
 	"reaction_origin": {
 		"x" : 0,
 		"y": -400
 	},
 	"emotes": {
-		"positive": "assets/sprites/bounce/dialog/bounce_positive.png",
-		"neutral": "assets/sprites/bounce/dialog/bounce_neutral.png",
-		"negative": "assets/sprites/bounce/dialog/bounce_negative.png"
+		"positive": "assets/sprites/bounce/dialog/pallo_positive.png",
+		"neutral": "assets/sprites/bounce/dialog/pallo_neutral.png",
+		"negative": "assets/sprites/bounce/dialog/pallo_negative.png"
 	}
 }

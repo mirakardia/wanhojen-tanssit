@@ -5,7 +5,11 @@
 		"name": "hihittäjä2",
 		"speaker": "hihittäjä",
 		"effects": [
-			
+			{
+		  "type": "change_state",
+		  "key": "hihitysjuoru2",
+			"value": "true"
+			}
 		],
 		"text": "“Hihi… Tähti on lukenut hömppärakkausromaania välitunnilla. Hassua ja niin söpöä!!”"
 		}

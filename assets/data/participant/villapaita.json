@@ -2,6 +2,7 @@
 	"offset": 20,
 	"name": "Sakarin Villapaita",
 	"neutral": "neutral",
+	"font": "assets/fonts/villapaita.ttf",
 	"reaction_origin": {
 		"x" : 0,
 		"y": -400

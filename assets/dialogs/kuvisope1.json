@@ -6,7 +6,11 @@
 		"name": "kuvisope1",
 		"speaker": "kuvisope",
 		"effects": [
-		 
+		 {
+		  "type": "change_state",
+		  "key": "kuvisjuoru",
+			"value": "true"
+			}
 		],
 		"text": "“Angsty Birdiä näkee harvoin ruokalassa. Kuulemma se syö lounaat autossaan. Autoin koristelemaan sitä.”"
 	  }

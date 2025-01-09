@@ -5,7 +5,11 @@
 		"name": "hihittäjä1",
 		"speaker": "hihittäjä",
 		"effects": [
-			
+			{
+		  "type": "change_state",
+		  "key": "hihitysjuoru1",
+			"value": "true"
+			}
 		],
 		"text": "“Hihihi, kuulin juttua, että Tähti on salaa toivoton ällöromantikko… Siltä löytyi romanssimangaa laukusta!”"
 		}

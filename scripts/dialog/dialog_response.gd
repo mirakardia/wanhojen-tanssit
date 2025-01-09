@@ -23,6 +23,12 @@ func set_data(_data: Dictionary, _game_manager):
 
 func check_requirements(requirements: Array) -> bool:
 	for requirement in requirements:
+		if typeof(requirement.key) == TYPE_STRING:
+			if requirement.key == "true":
+				requirement.key = true
+		if typeof(requirement.value) == TYPE_STRING:
+			if requirement.value == "true":
+				requirement.value = true
 		match requirement.type:
 			"less":
 				if not game_manager.get_game_state(requirement.key) < requirement.value:

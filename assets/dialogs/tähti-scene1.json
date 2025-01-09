@@ -162,7 +162,7 @@
 		  "text": "Käytä romanssijuoruja hyväksesi.",
 		  "requirements": [
 			{
-			  "key": "hihitysjuoru",
+			  "key": "hihitysjuoru1",
 			  "value": "true",
 			  "type": "equal"
 			}

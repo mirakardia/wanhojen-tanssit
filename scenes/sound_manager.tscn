@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://dorta1wgomica"]
+[gd_scene load_steps=53 format=3 uid="uid://dorta1wgomica"]
 
 [ext_resource type="Script" path="res://scripts/sound_manager.gd" id="1_6wc0h"]
 [ext_resource type="AudioStream" uid="uid://ca7abe8l84hyx" path="res://assets/puheääniä/mit1.wav" id="3_vdfxy"]
@@ -42,9 +42,10 @@
 [ext_resource type="AudioStream" uid="uid://d2lr4eerp53ow" path="res://assets/kenney_ui-audio/rollover4.ogg" id="39_robgs"]
 [ext_resource type="AudioStream" uid="uid://d4nokexwfd6f6" path="res://assets/bgm/villapaita master.mp3" id="41_wdif6"]
 [ext_resource type="AudioStream" uid="uid://gja3587lunyd" path="res://assets/bgm/tähti master.mp3" id="42_pjewa"]
-[ext_resource type="AudioStream" uid="uid://bmxvf5vjsldl1" path="res://assets/bgm/angst master.mp3" id="43_lse7g"]
+[ext_resource type="AudioStream" uid="uid://c24lk5r3o7iiu" path="res://assets/bgm/angst master.mp3" id="43_lse7g"]
 [ext_resource type="AudioStream" uid="uid://bjvm3xgsqrygm" path="res://assets/bgm/matopallo master.mp3" id="44_fsbcj"]
 [ext_resource type="AudioStream" uid="uid://bofh5e0n35k27" path="res://assets/bgm/WIENERVALSSI default master.mp3" id="45_4cv44"]
+[ext_resource type="AudioStream" uid="uid://dv5m6va7ocspc" path="res://assets/bgm/kikapoo.mp3" id="45_nw43k"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dkdwv"]
 random_pitch = 1.1
@@ -191,7 +192,8 @@ stream = ExtResource("44_fsbcj")
 bus = &"Bgm"
 
 [node name="BgmTitle" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_uttcu")
+stream = ExtResource("45_nw43k")
+volume_db = -3.014
 bus = &"Bgm"
 
 [node name="BgmOverworld" type="AudioStreamPlayer" parent="."]

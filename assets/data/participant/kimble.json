@@ -1,6 +1,7 @@
 {
 	"offset": 0,
 	"name": "Kim",
+	"font": "assets/fonts/kimble.ttf",
 	"neutral": "neutral",
 	"reaction_origin": {
 		"x" : 0,

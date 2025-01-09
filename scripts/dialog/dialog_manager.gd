@@ -102,7 +102,7 @@ func start_scene (scene_name: String) -> void:
 	in_dialog = true;
 	self.visible = true
 	var tween = dialog_root.create_tween()
-	tween.tween_property(dialog_root, "modulate", Color.WHITE, 1)
+	tween.tween_property(dialog_root, "modulate", Color.WHITE, .25)
 	tween.tween_callback(start_dialog.bind(dialog_data.start))
 
 
@@ -133,6 +133,7 @@ func end_dialog() -> void:
 	tween.tween_property(dialog_root, "modulate", transparent_white, 1)
 	tween.tween_callback(cleanup_participants)
 	tween.tween_callback(game_manager.emit_signal.bind("close_dialog", current_dialog.name))
+	SoundManager.play_bgm("bgm_overworld")
 	
 func cleanup_participants() -> void:
 	self.visible = false
@@ -159,6 +160,9 @@ func set_active_speaker(speaker : String) -> void:
 			dialog_box.add_theme_font_override("normal_font", participant.font)
 		else: 
 			dialog_box.add_theme_font_override("normal_font", default_font)
+	
+	
+	
 
 	if speaker_icons.has(speaker):
 		speaker_icon.texture = speaker_icons[speaker]
